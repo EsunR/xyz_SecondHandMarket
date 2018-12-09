@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,79 @@
   <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
   <script src="../lib/bootstrap/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/md-fonts/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../lib/normalize/normalize.css">
   <!-- 私有 -->
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js"></script>
   <title>Document</title>
 </head>
+
 <body>
-  <div id="test">
-    <div id="box">2333</div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="#">
+      <span class="nav_title">校园猪</span>
+      <span class="nav_subtitle">二手市场</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">主页<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            板块导航
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">发布需求</a>
+            <a class="dropdown-item" href="#">供给市场</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">反 馈</a>
+          </div>
+        </li>
+      </ul>
+      <div id="user_list">
+        <a href="#" id="user_name">EsunR</a>
+        <img id="user_head" src="./img/user_head.png"></img>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 新用户加入展示用户指示牌 -->
+  <div class="container mt-3">
+    <div id="new_user_to_show" class="jumbotron">
+      <h1 class="display-4">Hello, 欢迎来到二手市场!</h1>
+      <p class="lead">欢迎来到校园猪二手市场，在这里你可以发布和浏览校园中所展示的二手物品贩卖信息，请点击下面的“发布信息”将您的二手物品向他人展示，或者点击“不再提示”按钮开始浏览市场！</p>
+      <hr class="my-4">
+      <p>诚实守信的人，运气都不会太差 ~</p>
+      <p class="lead">
+        <a id="new_publish" class="btn btn-warning btn-lg" href="#" role="button">发布二手物品</a>
+        <a id="dontshow" class="btn btn-secondary btn-lg" href="#" role="button">不再提示</a>
+      </p>
+    </div>
   </div>
+
+
+  <form id="search" class="container mt-3" action="">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-warning" type="button">
+          搜索
+          <span class="mdi mdi-magnify"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+
 </body>
+
 </html>

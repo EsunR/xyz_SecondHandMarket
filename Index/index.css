@@ -1,1 +1,35 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+body .navbar a {
+  color: black;
+  text-decoration: none;
+}
+
+body .navbar .navbar-brand .nav_title {
+  border-right: 2px solid black;
+  padding-right: 6px;
+}
+
+body .navbar #user_list #user_name {
+  font-size: 1rem;
+}
+
+body .navbar #user_list #user_head {
+  width: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+body #new_user_to_show {
+  margin-bottom: 0;
+}
+
+body #new_user_to_show h1 {
+  margin-top: 0;
+}
+
+body #search input {
+  height: 3rem;
+}
+/*# sourceMappingURL=index.css.map */

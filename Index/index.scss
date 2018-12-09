@@ -1,6 +1,39 @@
-// 清浮动
-
-
 body{
-
+  .navbar{
+    a{
+      color:black;
+      text-decoration: none;
+    }
+    .navbar-brand{
+      .nav_title{
+        border-right: 2px solid black;
+        padding-right: 6px;
+      }
+    }
+    #user_list{
+      #user_name{
+        font-size: 1rem;
+      }
+      #user_head{
+        width: 40px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 40px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      }
+    }
+  }
+  
+  #new_user_to_show{
+    margin-bottom: 0;
+    h1{
+      margin-top: 0;
+    }
+  }
+  
+  #search{
+    input{
+      height: 3rem;
+    }
+  }
 }
