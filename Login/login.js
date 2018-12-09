@@ -3,9 +3,13 @@ $(function () {
   $.ajax({
     type: "GET",
     url: "https://v1.hitokoto.cn/?c=d",
-    success: function (data) {
+    success(data) {
       $('#hitokoto_text').text(data.hitokoto);
       $('#hitokoto_from').text(" ——《" + data.from + "》");
+    },
+    error(){
+      $('#hitokoto_text').text('生活永远充满惊喜。');
+      $('#hitokoto_from').text(" ——给予热爱生活的每个人");
     }
   });
 
@@ -29,7 +33,8 @@ $(function () {
   $('#message_btn').click(function(){
     $(this).css("display","none");
     $('#message_time').css("display","block");
-    let i = 5;
+    let i = 60;
+    $('#message_time').text(i+'s');
     let t = setInterval(function(){
       i--;
       $('#message_time').text(i + "s");
