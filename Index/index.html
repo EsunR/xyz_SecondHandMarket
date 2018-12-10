@@ -14,6 +14,7 @@
   <!-- 私有 -->
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
   <title>Document</title>
 </head>
 
@@ -56,7 +57,7 @@
   </nav>
 
   <!-- 新用户加入展示用户指示牌 -->
-  <div class="container mt-3">
+  <div id="new_user_brand" class="container mt-3">
     <div id="new_user_to_show" class="jumbotron">
       <h1 class="display-4">Hello, 欢迎来到二手市场!</h1>
       <p class="lead">欢迎来到校园猪二手市场，在这里你可以发布和浏览校园中所展示的二手物品贩卖信息，请点击下面的“发布信息”将您的二手物品向他人展示，或者点击“不再提示”按钮开始浏览市场！</p>
@@ -69,10 +70,10 @@
     </div>
   </div>
 
-
-  <form id="search" class="container mt-3" action="">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want" aria-describedby="basic-addon2">
+  <!-- 搜索框 -->
+  <form id="search" class="container mt-3 mb-3" action="">
+    <div class="input-group">
+      <input id="search_input" type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want" aria-describedby="basic-addon2">
       <div class="input-group-append">
         <button class="btn btn-warning" type="button">
           搜索
@@ -80,7 +81,137 @@
         </button>
       </div>
     </div>
+
+    <div id="associative_box" class="row col-12 col-sm-6 mt-2">
+      <ul id="associative_list"></ul>
+    </div>
+    </div>
+
+
   </form>
+
+  <!-- 轮播图 -->
+  <div id="banner" class="container">
+    <div class="row">
+      <div id="index_banner" class="carousel slide col-xl-9" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <!-- 指示器模板 -->
+          <li data-target="#index_banner" data-slide-to="0" class="active"></li>
+          <!-- --------- -->
+          <li data-target="#index_banner" data-slide-to="1"></li>
+          <li data-target="#index_banner" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- 轮播图模板 -->
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./img/banner/1.png" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>欢迎来到校园猪二手市场</h3>
+              <p>在这里你可以发布或找到任何二手物品!</p>
+            </div>
+          </div>
+          <!-------------->
+          <!-- 轮播图模板 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./img/banner/1.png" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>欢迎来到校园猪二手市场</h3>
+              <p>在这里你可以发布或找到任何二手物品！</p>
+            </div>
+          </div>
+          <!-------------->
+          <!-- 轮播图模板 -->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./img/banner/1.png" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>欢迎来到校园猪二手市场</h3>
+              <p>在这里你可以发布或找到任何二手物品！</p>
+            </div>
+          </div>
+          <!-------------->
+        </div>
+        <a class="carousel-control-prev" href="#index_banner" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#index_banner" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="d-none d-xl-block col-xl-3" id="right_banner">
+        <div class="banner_card">
+          <div class="banner_card_title">最新发布</div>
+          <ul id="banner_list">
+            <!-- 最新发布模板 -->
+            <li class="banner_list_item">
+              <img src="./img/banner_list/1.jpg">
+              <div class="list_detail">
+                <div class="list_detail_title">棒球帽，加绒，原价99，现在只需10元！</div>
+                <div class="price_box">
+                  <span class="price">￥10</span>
+                  <span class="original_price">￥998</span>
+                </div>
+              </div>
+            </li>
+            <!-- --------- -->
+            <!-- 最新发布模板 -->
+            <li class="banner_list_item">
+              <img src="./img/banner_list/2.jpg">
+              <div class="list_detail">
+                <div class="list_detail_title">超舒适衣服</div>
+                <div class="price_box">
+                  <span class="price">￥10</span>
+                  <span class="original_price">￥998</span>
+                </div>
+              </div>
+            </li>
+            <!-- --------- -->
+            <!-- 最新发布模板 -->
+            <li class="banner_list_item">
+              <img src="./img/banner_list/3.jpg">
+              <div class="list_detail">
+                <div class="list_detail_title">保湿保洁套装</div>
+                <div class="price_box">
+                  <span class="price">￥10</span>
+                  <span class="original_price">￥998</span>
+                </div>
+              </div>
+            </li>
+            <!-- --------- -->
+            <!-- 最新发布模板 -->
+            <li class="banner_list_item">
+              <img src="./img/banner_list/4.jpg">
+              <div class="list_detail">
+                <div class="list_detail_title">神仙水好喝啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+                <div class="price_box">
+                  <span class="price">￥10</span>
+                  <span class="original_price">￥998</span>
+                </div>
+              </div>
+            </li>
+            <!-- --------- -->
+            <!-- 最新发布模板 -->
+            <li class="banner_list_item">
+              <img src="./img/banner_list/5.jpg">
+              <div class="list_detail">
+                <div class="list_detail_title">砍舍友专用</div>
+                <div class="price_box">
+                  <span class="price">￥10</span>
+                  <span class="original_price">￥998</span>
+                </div>
+              </div>
+            </li>
+            <!-- --------- -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
 
 </body>
 
