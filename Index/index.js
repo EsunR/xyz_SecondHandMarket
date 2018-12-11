@@ -5,13 +5,11 @@ $(document).ready(function () {
     $.cookie('new_user', '0', { expires: 365 });
   })
   if (!$.cookie('new_user')) {
-    console.log(1);
-    $('#new_user_brand').css("display", "block");
     $('#new_user_brand').slideDown();
   }
 
 
-  
+
   // 搜索联想
   var getSearchData = function (search_str) {
     $.ajax({
@@ -20,6 +18,7 @@ $(document).ready(function () {
       dataType: "jsonp",
       jsonpCallback: "search_data",
       success: function (data) {
+        console.log(data);
         var search_res = [];
         data.result.forEach(element => {
           search_res.push(element[0]);
@@ -49,7 +48,6 @@ $(document).ready(function () {
 
   $('#search_input').focus(function () {
     if ($('#search_input').val().trim() !== '') {
-      $('#associative_box').show();
       getSearchData($('#search_input').val());
     }
   })
@@ -61,7 +59,6 @@ $(document).ready(function () {
   })
 
   $('#associative_list').on('click', '.associative_item', function () {
-    console.log(1);
     $('#search_input').val($(this).text());
     $('#associative_box').hide();
   })
