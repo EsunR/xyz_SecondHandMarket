@@ -300,16 +300,15 @@ body {
 }
 
 .area_box .area_title_box img {
-  height: 100%;
+  width: 100%;
   position: absolute;
 }
 
 .area_box .area_title_box .img_mask {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   position: absolute;
-  opacity: .85;
+  opacity: .9;
 }
 
 .area_box .area_title_box .title {
@@ -354,7 +353,7 @@ body {
   }
   .area_box .item_box .seller {
     position: relative !important;
-    top: .5rem;
+    top: 0.5rem;
     padding: 0 5px !important;
   }
 }
@@ -385,9 +384,8 @@ body {
 .area_box .item_box .item .price_box {
   margin-top: 10px;
   height: 2.5rem;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   border-radius: 5px;
-  border: solid 2px #fec018;
+  border: solid 2px white;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
 }
@@ -465,6 +463,15 @@ body {
   border-radius: 5px;
 }
 
+#featured .img_mask {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+#featured .price_box {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  border-color: #f6d365;
+}
+
 #cheaper .img_mask {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#5ee7df), to(#b490ca));
   background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
@@ -473,7 +480,7 @@ body {
 #cheaper .price_box {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#5ee7df), to(#81badb));
   background-image: linear-gradient(to top, #5ee7df 0%, #81badb 100%);
-  border-color: #8EC9DA;
+  border-color: #8ec9da;
 }
 
 #quality .img_mask {
@@ -485,5 +492,218 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(#f78ca0), color-stop(19%, #f9748f), color-stop(60%, #fd868c), to(#fe9a8b));
   background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
   border-color: #f9748f;
+}
+
+#school_show .title_box {
+  border-radius: 5px;
+  margin: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#868f96), to(#596164));
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+@media (max-width: 992px) {
+  #school_show .title_box .title {
+    font-size: 3rem !important;
+  }
+  #school_show .title_box .joint {
+    right: 0 !important;
+    left: 0 !important;
+  }
+}
+
+#school_show .title_box .title {
+  font-size: 4rem;
+  line-height: 8rem;
+  color: rgba(0, 0, 0, 0.13);
+  text-align: center;
+  font-weight: bold;
+}
+
+#school_show .title_box .joint_box {
+  position: relative;
+  height: 8rem;
+  margin: 0;
+}
+
+#school_show .title_box .joint_box .joint {
+  position: absolute;
+  height: 5rem;
+  width: 250px;
+  top: 0;
+  bottom: 0;
+  right: 4rem;
+  margin: auto;
+}
+
+#school_show .title_box .joint_box .joint .school_logo_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3.5rem;
+  height: 100%;
+  float: left;
+}
+
+#school_show .title_box .joint_box .joint .school_logo_box .school_logo {
+  display: block;
+  width: 100%;
+}
+
+#school_show .title_box .joint_box .joint span {
+  line-height: 5rem;
+  color: white;
+  float: left;
+}
+
+#school_show .title_box .joint_box .joint span:last-child {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#school_show .title_box .joint_box .joint .mdi {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+#school_show .price_box {
+  background-image: -webkit-gradient(linear, left top, right top, from(#868f96), to(#596164));
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  border-color: #596164;
+}
+
+.item_list .row {
+  padding: 0 10px;
+}
+
+.item_list .item {
+  padding: 0 5px;
+}
+
+.item_list .item_innerbox {
+  border-radius: 5px;
+  margin-top: 1rem;
+  border: 1px solid #eaecef;
+}
+
+.item_list .item_innerbox .img_border img {
+  width: 100%;
+}
+
+.item_list .item_innerbox .price_box {
+  margin: 5px;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: solid 2px white;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.item_list .item_innerbox .price_box .percent {
+  float: left;
+  line-height: 2.5rem;
+  width: 40%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.item_list .item_innerbox .price_box .price {
+  background: white;
+  min-width: 60%;
+  float: right;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.item_list .item_innerbox .price_box .price .old {
+  width: 50%;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: line-through;
+  float: right;
+  text-align: left;
+}
+
+.item_list .item_innerbox .price_box .price .now {
+  width: 50%;
+  font-size: 1.4rem;
+  float: left;
+}
+
+.item_list .item_innerbox .item_title {
+  padding: 0 5px;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.item_list .item_innerbox .item_title a {
+  text-align: justify;
+  display: block;
+  line-height: 1.5rem;
+}
+
+.item_list .item_innerbox .seller {
+  font-size: 0.9rem;
+  width: 100%;
+  line-height: 2rem;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.item_list .item_innerbox .seller .seller_name {
+  float: left;
+}
+
+.item_list .item_innerbox .seller .seller_name .mdi {
+  margin-right: 5px;
+}
+
+.item_list .item_innerbox .seller .seller_level {
+  float: right;
+}
+
+.item_list .item_innerbox .seller .seller_level span {
+  background-color: #24a647;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+#footer {
+  background-color: #f5f8f9;
+  margin-top: 1rem;
+}
+
+#footer .container .img_bg {
+  width: 50%;
+  display: block;
+  margin: 1rem auto;
+}
+
+#footer .container .footer_text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 60%;
+  width: 90%;
+}
+
+#footer .container .footer_text h1,
+#footer .container .footer_text h2 {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 100;
+}
+
+#footer .container .footer_text h3 {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=index.css.map */
