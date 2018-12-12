@@ -22,12 +22,18 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-warning">
 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar_toggler_title">菜单</span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <span class="mdi mdi-near-me"></span>板块导航
+            <span class="mdi mdi-near-me d-none d-sm-block"></span>板块导航
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
@@ -37,6 +43,10 @@
           </div>
         </li>
       </ul>
+      <div class="title">
+        校园猪&nbsp;|&nbsp;
+        <span class="school_name">安阳工学院</span>
+      </div>
       <div id="user_list">
         <a href="#" id="user_name">EsunR</a>
         <img id="user_head" src="./img/user_head.png"></img>
@@ -46,7 +56,6 @@
 
   <!-- 搜索框 -->
   <div id="search_box">
-    <div id="index_title">校园猪 | 安阳工学院</div>
     <div id="index_subtitle">二手物品发布 & 交易市场</div>
     <button id="publish" class="btn btn-outline-light" type="button">
       <img src="./img/publish.png" alt="">

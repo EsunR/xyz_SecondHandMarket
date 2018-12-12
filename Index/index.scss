@@ -21,7 +21,20 @@ body {
 // 导航
 .navbar {
   background-image: linear-gradient(120deg, #fac42e 0%, #fec018 100%);
+  // 小屏菜单按钮
+  .navbar-toggler{
+    margin-top: 5px;
+    .navbar_toggler_title{
+      vertical-align: middle;
+    }
+  }
+  // 下拉导航
   .nav-item {
+    .dropdown-toggle{
+      .mdi{
+        float: left;
+      }
+    }
     span {
       margin-right: 0.5rem;
     }
@@ -30,12 +43,19 @@ body {
     color: black;
     text-decoration: none;
   }
-  .navbar-brand {
-    .nav_title {
-      border-right: 2px solid black;
-      padding-right: 6px;
-    }
+
+  // 顶部标题
+  .title{
+    width: 149px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
   }
+
   #user_list {
     margin-right: 1rem;
     #user_name {
@@ -51,6 +71,8 @@ body {
     }
   }
 }
+
+
 // 新用户提醒
 #new_user_brand {
   display: none;
@@ -64,7 +86,7 @@ body {
 // 搜索框
 #search_box {
   position: relative;
-  height: 11rem;
+  height: 10rem;
   background-image: linear-gradient(120deg, #fac42e 0%, #fec018 100%);
   margin-bottom: 3rem;
   #index_title {
@@ -80,8 +102,8 @@ body {
   }
   @media (max-width: 1000px) {
     #index_subtitle {
-      font-size: 1.8rem;
-      margin-top: 0.7rem;
+      font-size: 1.5rem;
+      padding-top: 1rem;
     }
   }
   #index_subtitle {
@@ -254,7 +276,7 @@ body {
     }
   }
 }
-// 活动列表（通用）
+// 活动列表
 .area_box {
   .right_row {
     flex-direction: row-reverse;
@@ -535,6 +557,19 @@ body {
       }
     }
     .price_box {
+      @media (max-width: 400px) {
+        .percent{
+          font-size: 1rem !important;
+        }
+        .price{
+          .old{
+            font-size: .7rem !important;
+          }
+          .now{
+            font-size: 1rem !important;
+          }
+        }
+      }
       margin: 5px;
       height: 2.5rem;
       border-radius: 5px;
