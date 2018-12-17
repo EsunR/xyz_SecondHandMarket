@@ -8,9 +8,11 @@
   <!-- 引入文件 -->
   <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
   <script src="../lib/bootstrap/bootstrap.min.js"></script>
+  <script src="../lib/xyz_tpl/topbar/topbar.js"></script>
   <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../lib/md-fonts/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../lib/normalize/normalize.css">
+  <link rel="stylesheet" href="../lib/xyz_tpl/topbar/topbar.css">
   <!-- 私有 -->
   <link rel="stylesheet" href="./index.css">
   <script src="./index.js"></script>
@@ -20,7 +22,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <nav id="top_bar" class="navbar navbar-expand-lg navbar-light bg-warning">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,13 +45,30 @@
           </div>
         </li>
       </ul>
-      <div class="title">
+      <div class="title d-none d-md-block">
         校园猪&nbsp;|&nbsp;
         <span class="school_name">安阳工学院</span>
       </div>
       <div id="user_list">
-        <a href="#" id="user_name">EsunR</a>
-        <img id="user_head" src="./img/user_head.png"></img>
+        <a href="../User/user.html" id="user_name">
+          EsunR<img id="user_head" src="./img/user_head.png"></img>
+        </a>
+        <div id="user_info">
+          <ul>
+            <li>
+              <span>用户消息</span>
+              <span class="badge badge-warning">4</span>
+            </li>
+            <li>
+              <span>站内通知</span>
+              <span class="badge badge-warning">4</span>
+            </li>
+            <li>
+              <span>诚信度</span>
+              <span class="user_leavel badge badge-success">极好</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -152,7 +171,7 @@
           <div class="banner_card_title">最新发布</div>
           <ul id="banner_list">
             <!-- 最新发布模板 -->
-            <li class="banner_list_item">
+            <li class="banner_list_item item">
               <img src="./img/banner_list/1.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">棒球帽，加绒，原价99，现在只需10元！</div>
@@ -164,7 +183,7 @@
             </li>
             <!-- --------- -->
             <!-- 最新发布模板 -->
-            <li class="banner_list_item">
+            <li class="banner_list_item item">
               <img src="./img/banner_list/2.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">超舒适衣服</div>
@@ -176,7 +195,7 @@
             </li>
             <!-- --------- -->
             <!-- 最新发布模板 -->
-            <li class="banner_list_item">
+            <li class="banner_list_item item">
               <img src="./img/banner_list/3.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">保湿保洁套装</div>
@@ -188,7 +207,7 @@
             </li>
             <!-- --------- -->
             <!-- 最新发布模板 -->
-            <li class="banner_list_item">
+            <li class="banner_list_item item">
               <img src="./img/banner_list/4.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">神仙水好喝啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
@@ -200,7 +219,7 @@
             </li>
             <!-- --------- -->
             <!-- 最新发布模板 -->
-            <li class="banner_list_item">
+            <li class="banner_list_item item">
               <img src="./img/banner_list/5.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">砍舍友专用</div>
@@ -235,7 +254,7 @@
         <div class="row">
 
           <!-- 商品模板 -->
-          <div class="item col-md-4">
+          <div class="item col-md-4" item-id="1001">
             <div class="img_border">
               <img src="./img/banner_list/1.jpg" alt="">
             </div>

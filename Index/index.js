@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
   // 新手提示
   $('#dontshow').click(function () {
     $('#new_user_to_show').slideUp();
@@ -7,6 +9,7 @@ $(document).ready(function () {
   if (!$.cookie('new_user')) {
     $('#new_user_brand').slideDown();
   }
+
 
 
 
@@ -65,5 +68,9 @@ $(document).ready(function () {
 
 
 
+  // 点击跳转
+  $(".item").click(function () {  
+    window.location.href = '../Item/item.html?' + 'itemid=' + $(this).attr("item-id");
+  })
 
 });

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 引入文件 -->
+  <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../lib/bootstrap/bootstrap.min.js"></script>
+  <script src="../lib/xyz_tpl/topbar/topbar.js"></script>
+  <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../lib/md-fonts/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../lib/normalize/normalize.css">
+  <link rel="stylesheet" href="../lib/xyz_tpl/topbar/topbar.css">
+  <!-- 私有 -->
+  <link rel="stylesheet" href="./item.css">
+  <script src="./item.js"></script>
+  <title>商品详情</title>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <nav id="topbar" class="navbar navbar-expand-lg navbar-light bg-warning nav-shadow">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="navbar_toggler_title">菜单</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="mdi mdi-near-me d-none d-sm-block"></span>板块导航
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">发布需求</a>
+            <a class="dropdown-item" href="#">供给市场</a>
+            <a class="dropdown-item" href="../Index/index.html">二手市场</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">首 页</a>
+          </div>
+        </li>
+      </ul>
+      <div class="title d-none d-md-block">
+        校园猪&nbsp;|&nbsp;
+        <span class="school_name">安阳工学院</span>
+      </div>
+      <div id="user_list">
+        <a href="../User/user.html" id="user_name">
+          EsunR<img id="user_head" src="../Data/User/1001/avant.png"></img>
+        </a>
+        <div id="user_info">
+          <ul>
+            <li>
+              <span>用户消息</span>
+              <span class="badge badge-warning">4</span>
+            </li>
+            <li>
+              <span>站内通知</span>
+              <span class="badge badge-warning">4</span>
+            </li>
+            <li>
+              <span>诚信度</span>
+              <span class="user_leavel badge badge-success">极好</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- 商品信息 -->
+  <div id="item_info" class="container">
+    
+  </div>
+
+</body>
+
+</html>

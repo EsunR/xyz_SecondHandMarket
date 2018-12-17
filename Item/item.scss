@@ -1,0 +1,13 @@
+$main: #fec018;
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+// background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+$border: 1px solid #eaecef;
+
+// 基础配置
+body{
+  background-color: rgba(0,0,0,0.01);
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+}
