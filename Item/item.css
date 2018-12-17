@@ -1,9 +1,166 @@
 body {
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 body ul {
   padding: 0;
   list-style: none;
+}
+
+#item_info {
+  margin-top: 1rem;
+}
+
+#item_info .item_cover {
+  padding: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  #item_info .item_cover {
+    margin: 0 16px;
+  }
+}
+
+#item_info .item_cover img {
+  width: 100%;
+}
+
+#item_info .item_detail {
+  border-radius: 5px;
+  padding-right: 0;
+}
+
+@media (max-width: 992px) {
+  #item_info .item_detail {
+    padding-right: 16px !important;
+    margin-top: 16px;
+  }
+}
+
+#item_info .item_detail .item_detail_inner {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  height: 100%;
+}
+
+#item_info .item_detail label {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#item_info .item_detail label:first-child {
+  margin-top: 0;
+}
+
+#item_info .item_detail .item_name {
+  text-align: justify;
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+#item_info .item_detail .item_text {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#item_info .item_detail .old_price {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#item_info .item_detail .percent {
+  font-size: 1.5rem;
+  background-color: #fec018;
+  width: 6rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  border: 5px solid #f8b705;
+  margin: 5px 0;
+}
+
+#item_info .item_detail .seller span {
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+#item_info .item_detail .seller .badge {
+  font-size: 1rem;
+}
+
+#item_info .item_detail .btn_box button {
+  width: 100%;
+  height: 50px;
+}
+
+#item_info .item_detail .btn_box button .mdi {
+  margin-left: 10px;
+}
+
+@media (min-width: 1200px) {
+  #item_info .item_detail .btn_box {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 990px) {
+  .item_card {
+    padding: 0 16px;
+  }
+}
+
+#item_description .inner {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem -16px;
+  padding: 0 16px;
+}
+
+@media (max-width: 990px) {
+  #item_description .inner {
+    margin: 1rem 0px;
+    padding: 0;
+  }
+}
+
+#item_description .area_title {
+  text-align: center;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+#item_description .area_title .col-12 {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+#item_description .area_title span {
+  margin-left: 10px;
+}
+
+#item_description .description_text .col-12 {
+  background-color: white;
+  font-size: 1rem;
+  text-indent: 2em;
+  padding: 15px;
+  line-height: 2rem;
 }
 /*# sourceMappingURL=item.css.map */
