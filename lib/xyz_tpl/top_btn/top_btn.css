@@ -55,17 +55,17 @@
 #top_btn {
   position: absolute;
   position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  width: 3rem;
-  height: 3rem;
+  bottom: .8rem;
+  right: .8rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 10rem;
   font-size: 1.8rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   background-color: #fdc223;
   z-index: 999;
@@ -82,6 +82,8 @@
     height: 4rem;
     margin: 2.5rem;
     line-height: 4rem;
+    bottom: 0.5rem;
+    right: 0.5rem;
   }
 }
 /*# sourceMappingURL=top_btn.css.map */
