@@ -12,21 +12,7 @@ $(document).ready(function () {
     $('#message_null').show();
   }
 
-  // 显示回到顶部按钮
-  $('#top_btn').click(function () {
-    $('html, body').animate({
-      scrollTop: $("#topbar").offset().top
-    }, 1000);
-  })
-  let scrollY = 0;
-  $(window).scroll(function () {
-    if (window.scrollY > scrollY) {
-      $('#top_btn').removeClass('slideOutDown').addClass('animated slideInUp').show();
-    } else {
-      $('#top_btn').removeClass('slideInUp').addClass('animated slideOutDown');
-    }
-    scrollY = window.scrollY;
-  });
+
 
 
 });

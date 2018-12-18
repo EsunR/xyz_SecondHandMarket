@@ -294,37 +294,6 @@ body ul {
   margin-top: 0.5rem;
 }
 
-#top_btn {
-  position: absolute;
-  position: fixed;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 10rem;
-  font-size: 1.8rem;
-  line-height: 3rem;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  background-color: #fdc223;
-  z-index: 999;
-  display: none;
-  -webkit-animation-duration: .6s;
-          animation-duration: .6s;
-}
-
-@media (min-width: 960px) {
-  #top_btn {
-    width: 4rem;
-    height: 4rem;
-    margin: 2.5rem;
-    line-height: 4rem;
-  }
-}
-
 #footer {
   background-color: rgba(0, 0, 0, 0.04);
   margin-top: 1rem;
