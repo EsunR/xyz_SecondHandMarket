@@ -120,12 +120,12 @@
           <hr class="d-block d-xl-none">
           <div class="row btn_box">
             <div class="col-6">
-              <button type="button" class="btn btn-warning">
+              <button id="want" type="button" class="btn btn-warning" data-toggle="modal" data-target="#enter_your_info">
                 我想要<span class="mdi mdi-cash-multiple"></span>
               </button>
             </div>
             <div class="col-6">
-              <button type="button" class="btn btn-info">
+              <button id="collection" type="button" class="btn btn-info">
                 先收藏<span class="mdi mdi-folder-star"></span>
               </button>
             </div>
@@ -134,6 +134,79 @@
       </div>
     </div>
   </div>
+
+  <!-- 交换信息模态框 -->
+  <div class="modal fade" id="enter_your_info" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLongTitle">交换信息</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="remind">说明：如果您想要得到物品发布者的联系方式，您需要先输入您的个人联系方式以便于交换信息</div>
+          <form>
+            <div class="form-group">
+              <label for="your_name" class="col-form-label">您的称呼</label>
+              <input type="text" class="form-control" id="your_name">
+            </div>
+            <div class="form-group">
+              <label for="contact" class="col-form-label">联系方式</label>
+              <div class="row">
+                <div class="col-4">
+                  <select id="contact_way" class="form-control">
+                    <option>QQ</option>
+                    <option>微信</option>
+                    <option>手机</option>
+                  </select>
+                </div>
+                <div style="padding-left: 0" class="col-8">
+                  <input type="text" class="form-control" id="contact">
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="your_info_alert" class="alert alert-danger" role="alert">
+            请填写完整的信息
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" id="change_info" class="btn btn-warning">确定交换</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="seller_info" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="seller_info_title">卖家信息信息</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="seller_name">
+            卖家称呼：<span>张先生</span>
+          </div>
+          <div id="seller_contact">
+            联系方式：
+            <span>641411169</span>
+            <span class="badge badge-pill badge-primary">QQ</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- 商品描述 -->
   <div id="item_description" class="container">

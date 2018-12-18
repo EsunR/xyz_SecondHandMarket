@@ -19,11 +19,15 @@ KISSY.Suggest.callback({
 + 名称
 + 所在校园
 + 诚信值
++ 用户消息
++ 系统通知
 ```
 {
-  "userName": "EsunR",
-  "userSchool": "安阳工学院",
-  "integrity": 4
+  "name": "EsunR",
+  "school": "安阳工学院",
+  "integrity": 4,
+  "userMsg": 4,
+  "sysMsg": 4
 }
 ```
 > 备注：诚信值分为三个等级，4为极好，3为良好，2为中等，1为极差
