@@ -25,12 +25,17 @@
 
 <body>
 
-  <nav id="top_bar" class="navbar navbar-expand-lg navbar-light bg-warning">
+  <!-- Topbar -->
+  <nav id="topbar" class="navbar navbar-expand-lg navbar-light bg-warning nav-shadow">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="navbar_toggler_title">菜单</span>
+    </button>
+    <button class="navbar-toggler home_btn" type="button">
+      <span class="mdi mdi-home"></span>
+      <span class="navbar_toggler_title">主页</span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,6 +48,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
+            <a class="dropdown-item" href="../Index/index.html">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -54,21 +60,29 @@
       </div>
       <div id="user_list">
         <a href="../User/user.html" id="user_name">
-          EsunR<img id="user_head" src="./img/user_head.png"></img>
+          <span class="name">木牛牛马</span>
+          <img id="user_head" src="../Data/User/1001/head.png"></img>
+          <span class="badge badge-pill badge-primary">8</span>
         </a>
         <div id="user_info">
           <ul>
             <li>
-              <span>用户消息</span>
-              <span class="badge badge-warning">4</span>
+              <a href="">我想要的</a>
             </li>
             <li>
-              <span>站内通知</span>
-              <span class="badge badge-warning">4</span>
+              <a href="">我收藏的</a>
+            </li>
+            <li>
+              <a href="">用户消息</a>
+              <span id="user_msg" class="badge badge-warning">4</span>
+            </li>
+            <li>
+              <a href="">系统通知</a>
+              <span id="sys_msg" class="badge badge-warning">4</span>
             </li>
             <li>
               <span>诚信度</span>
-              <span class="user_leavel badge badge-success">极好</span>
+              <span class="user_level badge badge-success">极好</span>
             </li>
           </ul>
         </div>

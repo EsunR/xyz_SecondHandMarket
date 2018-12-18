@@ -293,38 +293,4 @@ body ul {
   margin: 1rem 0;
   margin-top: 0.5rem;
 }
-
-#footer {
-  background-color: rgba(0, 0, 0, 0.04);
-  margin-top: 1rem;
-}
-
-#footer .container .img_bg {
-  width: 50%;
-  display: block;
-  margin: 1rem auto;
-}
-
-#footer .container .footer_text {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  height: 60%;
-  width: 90%;
-}
-
-#footer .container .footer_text h1,
-#footer .container .footer_text h2 {
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: 100;
-}
-
-#footer .container .footer_text h3 {
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.5);
-}
 /*# sourceMappingURL=item.css.map */
