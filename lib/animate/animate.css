@@ -3404,7 +3404,8 @@
 @-webkit-keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    /* transform: translate3d(0, 100%, 0); */
+    bottom: -8rem;
     visibility: visible;
   }
 
@@ -3417,7 +3418,8 @@
 @keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    /* transform: translate3d(0, 100%, 0); */
+    bottom: -8rem;
     visibility: visible;
   }
 
@@ -3440,8 +3442,9 @@
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    /* -webkit-transform: translate3d(0, 100%, 0); */
+    /* transform: translate3d(0, 100%, 0); */
+    bottom: -8rem;
   }
 }
 
@@ -3453,8 +3456,9 @@
 
   to {
     visibility: hidden;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+    /* -webkit-transform: translate3d(0, 100%, 0); */
+    /* transform: translate3d(0, 100%, 0); */
+    bottom: -8rem;
   }
 }
 

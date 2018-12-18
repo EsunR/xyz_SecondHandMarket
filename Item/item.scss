@@ -1,7 +1,7 @@
 $main: #fec018;
 $shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 // background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-$border: 1px solid #eaecef;
+$border: 1px solid rgba(0, 0, 0, 0.1);
 $featured: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 
 // 基础配置
@@ -17,6 +17,7 @@ body {
 #item_info {
   margin-top: 1rem;
   .item_cover {
+    position: relative;
     padding: 0;
     border-radius: 10px;
     box-shadow: $shadow;
@@ -26,6 +27,26 @@ body {
     }
     img {
       width: 100%;
+    }
+    .item_condition_box {
+      width: 0;
+      height: 0;
+      border-bottom: 6rem solid $main;
+      border-right: 6rem solid transparent;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      .item_condition {
+        position: absolute;
+        width: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.4rem;
+        bottom: -5.6rem;
+        left: 0.4rem;
+        color: white;
+      }
     }
   }
 
@@ -115,10 +136,11 @@ body {
 
 // 商品描述
 #item_description {
+  cursor: default;
   .inner {
     @media (max-width: 990px) {
-      margin: 1rem 0px;   
-      padding: 0;   
+      margin: 1rem 0px;
+      padding: 0;
     }
     box-shadow: $shadow;
     border-radius: 10px;
@@ -146,6 +168,157 @@ body {
       text-indent: 2em;
       padding: 15px;
       line-height: 2rem;
+    }
+  }
+}
+
+#center {
+  #item_pic {
+    padding: 0;
+    padding-right: 1rem;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: $shadow;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+  #message_board {
+    padding: 0;
+    .inner {
+      background-color: #fff;
+      border: $border;
+      box-shadow: $shadow;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .title {
+        cursor: default;
+        background-image: $featured;
+        line-height: 4rem;
+        text-align: center;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      #message_box {
+        #message_null {
+          line-height: 5rem;
+          background-color: #fff;
+          color: rgba(0, 0, 0, 0.4);
+          font-size: 1.2rem;
+          font-weight: 100;
+          font-style: italic;
+          text-align: center;
+          display: none;
+        }
+        .message {
+          cursor: default;
+          background-color: #fff;
+          padding: 1rem;
+          border-bottom: $border;
+          .messager_head {
+            width: 200px;
+            padding-right: 0;
+            img {
+              width: 100%;
+              border-radius: 5px;
+              border: $border;
+            }
+          }
+          .messager_info {
+            text-align: justify;
+            color: rgba(0, 0, 0, 0.6);
+            text-indent: 2em;
+            font-size: 1rem;
+            .messager_name {
+              padding-top: 5px;
+              text-align: right !important;
+              padding-right: 0px;
+              color: rgba(0, 0, 0, 0.4);
+            }
+          }
+        }
+      }
+
+      #leave_msg {
+        padding: 1rem;
+        #msg_text {
+          width: 100%;
+          border: $border;
+          border-radius: 10px;
+          padding: 1rem;
+        }
+        input {
+          width: 6rem;
+          float: right;
+          margin: 1rem 0;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// 置顶按钮
+#top_btn {
+  position: absolute;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: $shadow;
+  cursor: pointer;
+  background-color: #fdc223;
+  z-index: 999;
+  @media (min-width: 960px) {
+    width: 4rem;
+    height: 4rem;
+    margin: 2.5rem;
+    line-height: 4rem;
+  }
+  display: none;
+  animation-duration: .6s;
+}
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.04);
+  margin-top: 1rem;
+  .container {
+    .img_bg {
+      width: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+    .footer_text {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 60%;
+      width: 90%;
+      h1,
+      h2 {
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 100;
+      }
+      h3 {
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.5);
+      }
     }
   }
 }

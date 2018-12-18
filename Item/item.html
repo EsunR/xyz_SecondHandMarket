@@ -9,6 +9,7 @@
   <script src="../lib/jquery/jquery-3.2.1.min.js"></script>
   <script src="../lib/bootstrap/bootstrap.min.js"></script>
   <script src="../lib/xyz_tpl/topbar/topbar.js"></script>
+  <link rel="stylesheet" href="../lib/animate/animate.css">
   <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../lib/md-fonts/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../lib/normalize/normalize.css">
@@ -27,6 +28,10 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="navbar_toggler_title">菜单</span>
+    </button>
+    <button class="navbar-toggler home_btn" type="button">
+      <span class="mdi mdi-home"></span>
+      <span class="navbar_toggler_title">主页</span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,17 +56,25 @@
       </div>
       <div id="user_list">
         <a href="../User/user.html" id="user_name">
-          EsunR<img id="user_head" src="../Data/User/1001/avant.png"></img>
+          <span class="name">木牛牛马</span>
+          <img id="user_head" src="../Data/User/1001/head.png"></img>
+          <span class="badge badge-pill badge-primary">8</span>
         </a>
         <div id="user_info">
           <ul>
             <li>
-              <span>用户消息</span>
-              <span class="badge badge-warning">4</span>
+              <a href="">我想要的</a>
             </li>
             <li>
-              <span>站内通知</span>
-              <span class="badge badge-warning">4</span>
+              <a href="">我收藏的</a>
+            </li>
+            <li>
+              <a href="">用户消息</a>
+              <span id="user_msg" class="badge badge-warning">4</span>
+            </li>
+            <li>
+              <a href="">系统通知</a>
+              <span id="sys_msg" class="badge badge-warning">4</span>
             </li>
             <li>
               <span>诚信度</span>
@@ -79,6 +92,9 @@
     <div class="row">
       <div class="item_cover col-lg-6">
         <img src="../Data/SecondHand/Item/1001/cover.jpg" alt="">
+        <div class="item_condition_box">
+          <div class="item_condition">9新</div>
+        </div>
       </div>
       <div class="item_detail col-lg-6">
         <div class="item_detail_inner">
@@ -127,7 +143,76 @@
 
       <div class="description_text item_card row">
         <div class="col-12">
-          这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！这是一顶特别棒的帽子！
+          这是一顶不是绿色的帽子。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 中心部分：商品图片&留言 -->
+  <div id="center" class="container">
+    <div class="row item_card">
+      <div id="item_pic" class="col-md-7 col-lg-8">
+        <!-- 展示图片 -->
+        <img src="../Data/SecondHand/Item/1001/1001_1.jpg" alt="">
+        <img src="../Data/SecondHand/Item/1001/1001_2.jpg" alt="">
+        <img src="../Data/SecondHand/Item/1001/1001_3.jpg" alt="">
+        <img src="../Data/SecondHand/Item/1001/1001_4.jpg" alt="">
+      </div>
+      <div id="message_board" class="col-md-5 col-lg-4">
+        <div class="inner">
+          <!-- 留言标题 -->
+          <div class="title">
+            留 言 板 <span class="mdi mdi-clipboard-text"></span>
+          </div>
+          <!-- 留言内容 -->
+          <div id="message_box">
+            <div id="message_null">
+              这里还没有留言，快来留言吧！
+            </div>
+            <!-- 留言模板 -->
+            <div class="message row">
+              <div class="messager_head col-3">
+                <img src="../Data/User/1001/head.png">
+              </div>
+              <div class="messager_info col-9">
+                <div class="msg">
+                  这顶帽子挺不错的，能帮我留着吗。
+                </div>
+                <div class="messager_name">From：<span>EsunR</span></div>
+              </div>
+            </div>
+            <!-- 留言模板 -->
+          </div>
+          <!-- 撰写留言 -->
+          <form id="leave_msg" action="">
+            <textarea name="msg_text" id="msg_text" cols="45" rows="5" placeholder="请在此留言"></textarea>
+            <input type="submit" class="btn btn-info" value="发布">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 返回顶部按钮 -->
+  <div id="top_btn" href="#">
+    <span class="mdi mdi-format-vertical-align-top"></span>
+  </div>
+
+  <!-- 底部 -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img_bg" src="../Data/SecondHand/System/foot_bg.png" alt="">
+        </div>
+        <div class="col-md-6">
+          <div class="footer_text">
+            <h1>校园猪 | SchoolPig</h1>
+            <h2>感谢你的加入</h2>
+            <hr>
+            <h3>SchoolPig @ 2018</h3>
+          </div>
         </div>
       </div>
     </div>

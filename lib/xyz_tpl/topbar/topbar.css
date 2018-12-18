@@ -1,4 +1,4 @@
-nav ul{
+nav ul {
   padding: 0;
   list-style: none;
 }
@@ -62,13 +62,13 @@ nav ul{
   cursor: pointer;
   border-radius: 40px;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .navbar #user_list #user_info {
   display: none;
   width: 120px;
-  height: 120px;
+  height: 200px;
   background-color: white;
   position: absolute;
   z-index: 999;
@@ -86,15 +86,15 @@ nav ul{
 
 .navbar #user_list #user_info ul li {
   cursor: pointer;
-  height: 33%;
+  height: 40px;
   padding: 8px 10px;
   font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .navbar #user_list #user_info ul li:hover {
@@ -106,7 +106,37 @@ nav ul{
   width: 25px;
   line-height: 19px;
 }
+.navbar #user_list #user_info ul li .badge-success {
+  width: 36px !important;
+}
 
 .navbar #user_list #user_info ul li .user_leavel {
   width: 40px;
+}
+
+#user_name .name {
+  margin-right: -10px;
+  position: relative;
+  top: 2px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#user_name .badge-primary {
+  position: absolute;
+  top: 0px;
+  right: -8px;
+}
+
+#topbar .home_btn {
+  height: 2.5rem;
+}
+
+#topbar .home_btn .mdi{
+  font-size: 1.7rem;
+  position: relative;
+  top: 2px;
+}
+#topbar .home_btn .navbar_toggler_title{
+  position: relative;
+  top: -4px;
 }

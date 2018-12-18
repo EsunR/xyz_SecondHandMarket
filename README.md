@@ -38,4 +38,4 @@
 路径：/Data/User/user_id/
 
 说明：uer_id为用户id命名的文件夹，遵循以下命名规则：
-+ 用户头像：avatar.png
++ 用户头像：head.png

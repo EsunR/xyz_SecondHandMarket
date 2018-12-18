@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 body ul {
@@ -561,6 +561,7 @@ body ul {
 }
 
 .item_list .item_innerbox {
+  background-color: #fff;
   cursor: pointer;
   border-radius: 5px;
   margin-top: 1rem;
@@ -669,7 +670,7 @@ body ul {
 }
 
 #footer {
-  background-color: #f5f8f9;
+  background-color: rgba(0, 0, 0, 0.04);
   margin-top: 1rem;
 }
 

@@ -16,7 +16,7 @@ $school_board: linear-gradient(to right, #868f96 0%, #596164 100%);
 $school_board_color: #596164;
 // 基础配置
 body {
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.03);
   ul{
     padding: 0;
     list-style: none;
@@ -507,6 +507,7 @@ body {
     padding: 0 5px;
   }
   .item_innerbox {
+    background-color: #fff;
     cursor: pointer;
     &:hover{
       border-width: 2px;
@@ -604,7 +605,7 @@ body {
 }
 // 页脚
 #footer {
-  background-color: #f5f8f9;
+  background-color: rgba(0, 0, 0, 0.04);
   margin-top: 1rem;
   .container {
     .img_bg {
