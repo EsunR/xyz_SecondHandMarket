@@ -104,7 +104,8 @@
 
 .btn-file {
     overflow: hidden;
-    margin-top: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     float: right;
 }
 
@@ -172,7 +173,7 @@
     border: 1px solid #ddd;
     padding: 8px;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
 }
 
 .file-preview .btn-xs {
@@ -395,7 +396,7 @@
 
 .file-drop-zone-title {
     color: #aaa;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding: 85px 10px;
     cursor: default;
 }

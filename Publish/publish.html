@@ -109,6 +109,9 @@
 
   <!-- 填写信息 -->
   <form id="item_info" action="" class="container">
+    <div class="step row">
+      <div>- Step1. 添加商品的基本信息 -</div>
+    </div>
     <!-- 商品标题 -->
     <div class="row">
       <div class="form-group col-12">
@@ -149,8 +152,20 @@
       </button>
     </div>
 
-    <div class="upload_box">
-      <input type="file" id="upload_pic" data-preview-file-type="text" />
+    <div class="step row">
+      <div>- Step2. 为商品添加图片 -</div>
+    </div>
+
+    <div id="upload_box" class="row">
+      <div class="col-xl-3 box">
+        <label for="upload_cover">商品封面</label>
+        <input type="file" id="upload_cover" data-preview-file-type="text" accept="image/jpeg,image/jpg,image/png">
+      </div>
+      <div class="col-xl-9 box">
+        <label for="upload_pic">商品介绍图</label>
+        <input type="file" id="upload_pic" data-preview-file-type="text" accept="image/jpeg,image/jpg,image/png"
+          multiple="multiple">
+      </div>
     </div>
 
 
