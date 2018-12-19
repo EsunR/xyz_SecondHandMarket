@@ -1,0 +1,80 @@
+$main: #fec018;
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+// background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+$border: 1px solid rgba(0, 0, 0, 0.1);
+$featured: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+
+// 基础配置
+body {
+  background-color: rgba(0, 0, 0, 0.03);
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  @media (max-width: 576px) {
+    #topbar {
+      box-shadow: none;
+    }
+  }
+}
+
+#publish_banner {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  background-color: $main;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  @media (max-width: 576px) {
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+#item_info {
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 50rem;
+  @media (max-width: 576px) {
+    margin-top: 0;
+    border-radius: 0;
+  }
+  label {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.1rem;
+  }
+  #condition_help{
+    padding-right: 20px;
+    line-height: 2.2rem;
+    text-align: justify;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    span:not(:last-child){
+      background-color: rgb(245, 226, 164);
+      padding: 0 5px;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+    span:last-child{
+      position: relative;
+      top: -5px;
+      right: -5px;
+    }
+  }
+  // 上传文件控件
+  .upload_box{
+    margin-bottom: 3rem;
+  }
+}
