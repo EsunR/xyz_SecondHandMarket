@@ -18,14 +18,13 @@ KISSY.Suggest.callback({
 ### 获取用户基本信息
 + 名称
 + 所在校园
-+ 诚信值
++ ~~诚信值（划掉）~~
 + 用户消息
 + 系统通知
 ```
 {
   "name": "EsunR",
   "school": "安阳工学院",
-  "integrity": 4,
   "userMsg": 4,
   "sysMsg": 4
 }

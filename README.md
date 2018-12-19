@@ -50,6 +50,7 @@ PS：数据库字段命名方法采用驼峰式命名，如 `user name` 应该�
 
 + id: 用户ID
 + name: 用户名
++ realName: 真实姓名
 + school: 用户所在学校
 + level: 用户信誉等级（默认为良好）
 + phone: 联系电话
