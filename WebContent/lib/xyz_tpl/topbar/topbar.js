@@ -9,9 +9,9 @@ $(document).ready(function () {
 
   // 消息通知下拉动画
   $("#user_list").hover(function () {
-    $("#user_info").slideDown();
+    $("#user_info").slideDown('fast');
   }, function () {
-    $("#user_info").slideUp();
+    $("#user_info").slideUp('fast');
   })
 
   // 聚合通知
@@ -19,4 +19,27 @@ $(document).ready(function () {
   let user_msg_num = parseInt($('#user_msg').text());
   let sys_msg_num = parseInt($('#user_msg').text());
   $('#user_name .badge-primary').text(user_msg_num + sys_msg_num)
+
+  // 跳转按钮的链接
+  let user_url = '../User/user.html'
+  let nav_btn_url = ['#publish', '#want', '#collection'];
+  for (let i = 0; i < 3; i++) {
+    $('.nav_btn').eq(i).click(function(){
+      window.location.href = user_url + nav_btn_url[i];
+    })
+  }
+  $('#user_name').click(function(){
+    window.location.href = user_url + '#info'
+  })
+  $('.user_list_btn').eq(0).click(function(){
+    window.location.href = user_url + '#userMsg'
+  })
+  $('.user_list_btn').eq(1).click(function(){
+    window.location.href = user_url + '#sysMsg'
+  })
+  $('.user_list_btn').eq(2).click(function(){
+    window.location.href = '../Login/login.html'
+  })
+  
+
 });
