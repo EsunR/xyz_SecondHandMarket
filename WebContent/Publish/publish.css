@@ -46,7 +46,6 @@ body ul {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding-top: 0rem;
   padding-bottom: 2rem;
-  margin-bottom: 50rem;
   overflow: hidden;
 }
 
@@ -81,7 +80,7 @@ body ul {
   font-weight: bold;
 }
 
-#item_info #condition_help {
+#item_info .help {
   padding-right: 20px;
   line-height: 2.2rem;
   text-align: justify;
@@ -91,17 +90,22 @@ body ul {
   padding-right: 15px;
 }
 
-#item_info #condition_help span:not(:last-child) {
+#item_info .help span:not(:last-child) {
   background-color: #f5e2a4;
   padding: 0 5px;
   margin: 0 5px;
   border-radius: 5px;
 }
 
-#item_info #condition_help span:last-child {
+#item_info .help span:last-child {
   position: relative;
   top: -5px;
   right: -5px;
+}
+
+#item_info .help .mdi {
+  background-color: #FFF3CD !important;
+  padding: 0 !important;
 }
 
 #item_info #upload_box {
@@ -142,5 +146,17 @@ body ul {
 
 #item_info #upload_box .cover .kv-file-content {
   width: auto;
+}
+
+#item_info #seller_info {
+  margin-top: 2rem;
+}
+
+#publish_btn {
+  width: 20rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=publish.css.map */

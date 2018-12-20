@@ -70,3 +70,4 @@ PS：数据库字段命名方法采用驼峰式命名，如 `user name` 应该�
 + sellerName: 卖家称呼（与卖家的昵称区分开）
 + sellerContactWay: 卖家联系方式 （传递参数：1-QQ，2-微信，3-电话）
 + sellerContact: 联系号码（QQ号、微信号、电话）
++ item_pic: 卖家上传的图片数量（12.20新加需求）
