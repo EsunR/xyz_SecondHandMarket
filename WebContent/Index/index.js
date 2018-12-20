@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
   // 新手提示
   $('#dontshow').click(function () {
     $('#new_user_to_show').slideUp();
@@ -9,8 +7,6 @@ $(document).ready(function () {
   if (!$.cookie('new_user')) {
     $('#new_user_brand').slideDown();
   }
-
-
 
 
   // 搜索联想

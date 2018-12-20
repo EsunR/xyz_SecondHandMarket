@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+
 import pojo.Item;
 import pojo.User;
 
@@ -11,5 +13,7 @@ public interface Service {
 	void addUser(User user);
 
 	Item findItemById(Integer itemid);
+
+	List<Item> findAllItem();
 
 }

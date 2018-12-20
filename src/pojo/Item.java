@@ -9,7 +9,7 @@ public class Item {
 
     private Long oldprice;
 
-    private String condition;
+    private String conditions;
 
     private Integer sellerid;
 
@@ -53,12 +53,12 @@ public class Item {
         this.oldprice = oldprice;
     }
 
-    public String getCondition() {
-        return condition;
+    public String getConditions() {
+        return conditions;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition == null ? null : condition.trim();
+    public void setConditions(String conditions) {
+        this.conditions = conditions == null ? null : conditions.trim();
     }
 
     public Integer getSellerid() {

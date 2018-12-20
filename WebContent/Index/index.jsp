@@ -98,8 +98,8 @@
   <div id="search_box">
     <div id="index_subtitle">二手物品发布 & 交易市场</div>
     <button id="publish" class="btn btn-outline-light" type="button">
-      <img src="./img/publish.png" alt="">
-      <a href="../Publish/publish.html">发布物品</a>
+      <img src="${pageContext.request.contextPath}/Index/img/publish.png" alt="">
+      <a href=".${pageContext.request.contextPath}/Index/Publish/publish.html">发布物品</a>
     </button>
     <form id="search" class="container" action="">
       <div class="input-group">
@@ -160,7 +160,7 @@
           <!-------------->
           <!-- 轮播图模板 -->
           <div class="carousel-item">
-            <img class="d-block w-100" src="./img/banner/1.png" alt="First slide">
+            <img class="d-block w-100" src="${pageContext.request.contextPath}/Index/img/banner/1.png" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h3>欢迎来到校园猪二手市场</h3>
               <p>在这里你可以发布或找到任何二手物品！</p>
@@ -169,7 +169,7 @@
           <!-------------->
           <!-- 轮播图模板 -->
           <div class="carousel-item">
-            <img class="d-block w-100" src="./img/banner/1.png" alt="First slide">
+            <img class="d-block w-100" src="${pageContext.request.contextPath}/Index/img/banner/1.png" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h3>欢迎来到校园猪二手市场</h3>
               <p>在这里你可以发布或找到任何二手物品！</p>
@@ -193,7 +193,7 @@
           <ul id="banner_list">
             <!-- 最新发布模板 -->
             <li class="banner_list_item item">
-              <img src="./img/banner_list/1.jpg">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/1.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">棒球帽，加绒，原价99，现在只需10元！</div>
                 <div class="price_box">
@@ -205,7 +205,7 @@
             <!-- --------- -->
             <!-- 最新发布模板 -->
             <li class="banner_list_item item">
-              <img src="./img/banner_list/2.jpg">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/2.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">超舒适衣服</div>
                 <div class="price_box">
@@ -217,7 +217,7 @@
             <!-- --------- -->
             <!-- 最新发布模板 -->
             <li class="banner_list_item item">
-              <img src="./img/banner_list/3.jpg">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">保湿保洁套装</div>
                 <div class="price_box">
@@ -229,7 +229,7 @@
             <!-- --------- -->
             <!-- 最新发布模板 -->
             <li class="banner_list_item item">
-              <img src="./img/banner_list/4.jpg">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/4.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">神仙水好喝啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
                 <div class="price_box">
@@ -241,7 +241,7 @@
             <!-- --------- -->
             <!-- 最新发布模板 -->
             <li class="banner_list_item item">
-              <img src="./img/banner_list/5.jpg">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/5.jpg">
               <div class="list_detail">
                 <div class="list_detail_title">砍舍友专用</div>
                 <div class="price_box">
@@ -262,7 +262,7 @@
   <div id="featured" class="area_box container">
     <div class="row">
       <div class="area_title_box col-md-4">
-        <img src="./img/champain.png" alt="">
+        <img src="${pageContext.request.contextPath}/Index/img/champain.png" alt="">
         <div class="img_mask"></div>
         <div class="title">
           <div class="area_title">编辑精选</div>
@@ -277,7 +277,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4" item-id="1001">
             <div class="img_border">
-              <img src="./img/banner_list/1.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/1.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -301,7 +301,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/2.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/2.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -325,7 +325,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -356,7 +356,7 @@
   <div id="cheaper" class="area_box container">
     <div class="row right_row">
       <div class="area_title_box col-md-4">
-        <img src="./img/cheaper.png" alt="">
+        <img src="${pageContext.request.contextPath}/Index/img/cheaper.png" alt="">
         <div class="img_mask"></div>
         <div class="title">
           <div class="area_title">平台低价</div>
@@ -371,7 +371,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/1.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/1.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -395,7 +395,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/2.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/2.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -419,7 +419,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -450,7 +450,7 @@
   <div id="quality" class="area_box container">
     <div class="row">
       <div class="area_title_box col-md-4">
-        <img src="./img/quality.png" alt="">
+        <img src="${pageContext.request.contextPath}/Index/img/quality.png" alt="">
         <div class="img_mask"></div>
         <div class="title">
           <div class="area_title">优质成色</div>
@@ -465,7 +465,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -489,7 +489,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/5.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/5.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -513,7 +513,7 @@
           <!-- 商品模板 -->
           <div class="item col-md-4">
             <div class="img_border">
-              <img src="./img/banner_list/4.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/4.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -547,7 +547,7 @@
       <div class="joint_box col-md-7">
         <div class="joint clearfix">
           <div class="school_logo_box">
-            <img class="school_logo" src="./img/school_logo.png">
+            <img class="school_logo" src="${pageContext.request.contextPath}/Index/img/school_logo.png">
           </div>
           <span class="mdi mdi-close"></span>
           <span>校园猪</span>
@@ -563,7 +563,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -591,7 +591,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -619,7 +619,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -647,7 +647,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -675,7 +675,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -703,7 +703,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -731,7 +731,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -759,7 +759,7 @@
 
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="./img/banner_list/3.jpg" alt="">
+              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent">-99%</div>
@@ -800,7 +800,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img class="img_bg" src="./img/foot_bg.png" alt="">
+          <img class="img_bg" src="${pageContext.request.contextPath}/Index/img/foot_bg.png" alt="">
         </div>
         <div class="col-md-6">
           <div class="footer_text">

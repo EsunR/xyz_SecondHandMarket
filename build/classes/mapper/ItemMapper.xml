@@ -6,7 +6,7 @@
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="BIGINT" />
     <result column="oldPrice" property="oldprice" jdbcType="BIGINT" />
-    <result column="condition" property="condition" jdbcType="VARCHAR" />
+    <result column="conditions" property="conditions" jdbcType="VARCHAR" />
     <result column="sellerId" property="sellerid" jdbcType="INTEGER" />
     <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="sellerName" property="sellername" jdbcType="VARCHAR" />
@@ -72,7 +72,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, title, price, oldPrice, condition, sellerId, description, sellerName, sellerContactWay, 
+    id, title, price, oldPrice, conditions, sellerId, description, sellerName, sellerContactWay, 
     sellerContact
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="pojo.ItemExample" >
@@ -107,11 +107,11 @@
   </delete>
   <insert id="insert" parameterType="pojo.Item" >
     insert into item (id, title, price, 
-      oldPrice, condition, sellerId, 
+      oldPrice, conditions, sellerId, 
       description, sellerName, sellerContactWay, 
       sellerContact)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{price,jdbcType=BIGINT}, 
-      #{oldprice,jdbcType=BIGINT}, #{condition,jdbcType=VARCHAR}, #{sellerid,jdbcType=INTEGER}, 
+      #{oldprice,jdbcType=BIGINT}, #{conditions,jdbcType=VARCHAR}, #{sellerid,jdbcType=INTEGER}, 
       #{description,jdbcType=VARCHAR}, #{sellername,jdbcType=VARCHAR}, #{sellercontactway,jdbcType=INTEGER}, 
       #{sellercontact,jdbcType=VARCHAR})
   </insert>
@@ -130,8 +130,8 @@
       <if test="oldprice != null" >
         oldPrice,
       </if>
-      <if test="condition != null" >
-        condition,
+      <if test="conditions != null" >
+        conditions,
       </if>
       <if test="sellerid != null" >
         sellerId,
@@ -162,8 +162,8 @@
       <if test="oldprice != null" >
         #{oldprice,jdbcType=BIGINT},
       </if>
-      <if test="condition != null" >
-        #{condition,jdbcType=VARCHAR},
+      <if test="conditions != null" >
+        #{conditions,jdbcType=VARCHAR},
       </if>
       <if test="sellerid != null" >
         #{sellerid,jdbcType=INTEGER},
@@ -203,8 +203,8 @@
       <if test="record.oldprice != null" >
         oldPrice = #{record.oldprice,jdbcType=BIGINT},
       </if>
-      <if test="record.condition != null" >
-        condition = #{record.condition,jdbcType=VARCHAR},
+      <if test="record.conditions != null" >
+        conditions = #{record.conditions,jdbcType=VARCHAR},
       </if>
       <if test="record.sellerid != null" >
         sellerId = #{record.sellerid,jdbcType=INTEGER},
@@ -232,7 +232,7 @@
       title = #{record.title,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=BIGINT},
       oldPrice = #{record.oldprice,jdbcType=BIGINT},
-      condition = #{record.condition,jdbcType=VARCHAR},
+      conditions = #{record.conditions,jdbcType=VARCHAR},
       sellerId = #{record.sellerid,jdbcType=INTEGER},
       description = #{record.description,jdbcType=VARCHAR},
       sellerName = #{record.sellername,jdbcType=VARCHAR},
@@ -254,8 +254,8 @@
       <if test="oldprice != null" >
         oldPrice = #{oldprice,jdbcType=BIGINT},
       </if>
-      <if test="condition != null" >
-        condition = #{condition,jdbcType=VARCHAR},
+      <if test="conditions != null" >
+        conditions = #{conditions,jdbcType=VARCHAR},
       </if>
       <if test="sellerid != null" >
         sellerId = #{sellerid,jdbcType=INTEGER},
@@ -280,7 +280,7 @@
     set title = #{title,jdbcType=VARCHAR},
       price = #{price,jdbcType=BIGINT},
       oldPrice = #{oldprice,jdbcType=BIGINT},
-      condition = #{condition,jdbcType=VARCHAR},
+      conditions = #{conditions,jdbcType=VARCHAR},
       sellerId = #{sellerid,jdbcType=INTEGER},
       description = #{description,jdbcType=VARCHAR},
       sellerName = #{sellername,jdbcType=VARCHAR},

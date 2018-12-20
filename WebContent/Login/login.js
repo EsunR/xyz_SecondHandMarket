@@ -46,11 +46,11 @@ $(function () {
     	    type: "post",
     	    dataType:"json",
     	    data:$('#login_box').serialize(),
-    	    url: loca+"/login.action",
+    	    url: loca+"/login",
     	    async:false,
     	    success:function(data) {
     	    if(data.msg==1){
-    	    	window.location.href="http://localhost:8080/secondMarke/Index/index.jsp";
+    	    	window.location.href="http://localhost:8080/secondMarke/indexs";
     	    }
     	    else{
     	    	warning('账号或者密码错误!')
@@ -79,11 +79,11 @@ $(function () {
       	    type: "post",
       	    dataType:"json",
       	    data:$('#register_box').serialize(),
-      	    url: loca+"/register.action",
+      	    url: loca+"/register",
       	    async:false,
       	    success:function(data) {
       	    if(data.msg==1){
-      	    	window.location.href="http://localhost:8080/secondMarke/Login/index.jsp";
+      	    	window.location.href="http://localhost:8080/secondMarke/Login/login.jsp";
       	    }
       	    else{
       	    	warning('用户已存在!')

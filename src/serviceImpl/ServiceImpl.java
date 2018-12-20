@@ -42,5 +42,11 @@ public class ServiceImpl implements Service {
 		userMapper.selectByItemId();
 		return list.get(0);
 	}
+	@Override
+	public List<Item> findAllItem() {
+		ItemExample example=new ItemExample();
+		List<Item> list = itemMapper.selectByExample(example);
+		return list;
+	}
 
 }

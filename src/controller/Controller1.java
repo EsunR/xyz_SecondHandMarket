@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,6 +66,13 @@ public class Controller1 {
 			e.printStackTrace();
 			return null;
 		}
-		
+	}  
+	@RequestMapping("indexs")
+	public ModelAndView index(){
+		ModelAndView mav = new ModelAndView();
+		List<Item> item=service.findAllItem();
+		mav.addObject("list",item);
+		mav.setViewName("Index/index");
+		return mav;
 	}  
 }
