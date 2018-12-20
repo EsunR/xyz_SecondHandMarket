@@ -16,7 +16,6 @@ $(document).ready(function () {
     initialPreviewShowDelete: true,
     frameClass: 'cover krajee-default',
   });
-
   $("#upload_pic").fileinput({
     language: "zh",
     theme: "fa",
@@ -34,4 +33,9 @@ $(document).ready(function () {
     initialPreviewShowDelete: true,
     frameClass: 'pic krajee-default',
   });
+  
+  //  TODO : 发布商品
+  $('#publish_btn').click(function(){
+	  console.log(1);
+  })
 });
