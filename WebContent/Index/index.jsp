@@ -22,8 +22,8 @@
   var loca="${pageContext.request.contextPath}";
   </script>
   <!-- 私有 -->
-  <link rel="stylesheet" href="./index.css">
-  <script src="./index.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/Index/index.css">
+  <script src="${pageContext.request.contextPath}/Index/index.js"></script>
   <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
   <title>校园猪 | 二手市场</title>
 </head>
@@ -53,7 +53,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.html">二手市场</a>
+            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.jsp">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -151,7 +151,7 @@
         <div class="carousel-inner">
           <!-- 轮播图模板 -->
           <div class="carousel-item active">
-            <img class="d-block w-100" src="./img/banner/1.png" alt="First slide">
+            <img class="d-block w-100" src="${pageContext.request.contextPath}/Index/img/banner/1.png" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
               <h3>欢迎来到校园猪二手市场</h3>
               <p>在这里你可以发布或找到任何二手物品!</p>
