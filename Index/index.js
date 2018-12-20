@@ -70,7 +70,7 @@ $(document).ready(function () {
 
   // 点击跳转
   $(".item").click(function () {  
-    window.location.href = '../Item/item.html?' + 'itemid=' + $(this).attr("item-id");
+    window.location.href = loca+'/Item.action?' + 'itemid=' + $(this).attr("item-id");
   })
 
 });
