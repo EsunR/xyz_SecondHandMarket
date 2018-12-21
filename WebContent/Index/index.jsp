@@ -64,7 +64,7 @@
         <span class="school_name">安阳工学院</span>
       </div>
       <div id="user_list">
-        <a href="${pageContext.request.contextPath}/User/user.html" id="user_name">
+        <a href="${pageContext.request.contextPath}/User/user.jsp" id="user_name">
           <span class="name">木牛牛马</span>
           <img id="user_head" src="${pageContext.request.contextPath}/Data/User/1001/head.png"></img>
           <span class="badge badge-pill badge-primary">8</span>
@@ -99,7 +99,7 @@
     <div id="index_subtitle">二手物品发布 & 交易市场</div>
     <button id="publish" class="btn btn-outline-light" type="button">
       <img src="${pageContext.request.contextPath}/Index/img/publish.png" alt="">
-      <a href="./Publish/publish.html">发布物品</a>
+      <a href="${pageContext.request.contextPath}/Publish/publish.jsp">发布物品</a>
     </button>
     <form id="search" class="container" action="">
       <div class="input-group">
@@ -557,7 +557,7 @@
 
     <div class="item_list" class="">
       <div class="row">
-
+商品从这开始写 
         <!-- 商品模板 -->
         <div class="item col-6 col-lg-3">
 

@@ -15,7 +15,7 @@ public interface Service {
 
 	UserAndItem findItemById(Integer itemid);
 
-	List<Item> findAllItem();
+	List<UserAndItem> findAllItem();
 
 	int addItem(Item item);
 

@@ -47,9 +47,9 @@ public class ServiceImpl implements Service {
 		return list.get(0);
 	}
 	@Override
-	public List<Item> findAllItem() {
+	public List<UserAndItem> findAllItem() {
 		ItemExample example=new ItemExample();
-		List<Item> list = itemMapper.selectByExample(example);
+		List<UserAndItem> list = item1Mapper.findAllItem();
 		return list;
 	}
 	@Transactional

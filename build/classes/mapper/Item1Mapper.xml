@@ -9,4 +9,12 @@
     from item i,user u
     where i.id = #{id} and u.id=i.sellerId
   </select>
+ <select id="findAllItem"   resultType="pojo.UserAndItem">
+    select 
+     i.id,i.title,i.price,i.oldprice,i.conditions,i.sellerid,i.description,i.sellername,i.sellercontactway,i.sellercontact,
+    
+    u.name,u.realname,u.school,u.level,u.phone,u.qq,u.wechat,u.password
+    from item i,user u
+    where  u.id=i.sellerId
+  </select>
 </mapper>

@@ -8,4 +8,6 @@ public interface Item1Mapper {
 
 	List<UserAndItem> findItemById(Integer itemid);
 
+	List<UserAndItem> findAllItem();
+
 }

@@ -67,6 +67,7 @@ public class Controller1 {
 				map.put("msg","2");
 				return map;
 			}else {
+				user.setLevel("良好");
 				service.addUser(user);
 				map.put("msg","1");
 				return map;
@@ -79,7 +80,7 @@ public class Controller1 {
 	@RequestMapping("indexs")
 	public ModelAndView index(){
 		ModelAndView mav = new ModelAndView();
-		List<Item> item=service.findAllItem();
+		List<UserAndItem> item=service.findAllItem();
 		mav.addObject("list",item);
 		mav.setViewName("Index/index");
 		return mav;
