@@ -6,6 +6,7 @@ $(document).ready(function () {
     USERID = user_info.id
     $('#topbar .school_name').eq(0).text(user_info.school);
     $('#user_name .name').eq(0).text(user_info.name);
+    $('#user_head').attr('src','../Data/User/' + USERID + '/head')
   }
 
 

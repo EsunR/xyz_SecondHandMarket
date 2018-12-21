@@ -12,7 +12,6 @@ function showPreview(source) {
 }
 
 
-
 var item_id;
 // 确定商品已卖出后执行的函数
 function publish_sold() {

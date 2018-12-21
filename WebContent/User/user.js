@@ -101,5 +101,5 @@ $(function () {
     renderSellerInfo(seller_info);
   })
 
-
+  console.log(USERID);
 });
