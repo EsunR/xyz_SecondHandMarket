@@ -55,12 +55,15 @@ body {
 
   // 个人信息
   #info {
+    label{
+      margin-bottom: 5px;
+    }
     #user_img_name {
       .inner {
         position: relative;
         margin-bottom: 2rem;
       }
-      #user_head {
+      #user_head_preview {
         width: 100%;
         border-radius: 10px;
       }
@@ -80,13 +83,31 @@ body {
         }
       }
     }
+    .file_btn {
+      position: relative;
+      input{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        height: 38px;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .btn{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+      }
+    }
     .btn_box {
       display: flex;
       justify-content: space-between;
       margin: 1rem auto;
       width: 15.6rem;
       @media (min-width: 1200px) {
-        margin-top: 3.3rem;
+        margin-top: 2rem;
       }
     }
   }
@@ -101,6 +122,7 @@ body {
 
   // 物品卡片
   .item_card {
+    cursor: pointer;
     position: relative;
     margin-top: 2rem;
     @media (max-width: 990px) {
@@ -202,17 +224,10 @@ body {
     @media (max-width: 990px) {
       padding-top: 1rem;
     }
-    .btn_box {
-      width: 5.5rem;
-    }
   }
 }
-.test {
-  height: 5rem;
-  background-color: pink;
-}
 
-#tag{
+#tag {
   margin: 2rem auto;
   width: 20rem;
   text-align: center;

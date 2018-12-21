@@ -38,7 +38,7 @@ nav ul {
 }
 
 #topbar .title {
-  width: 149px;
+  width: 20rem;
   height: 24px;
   position: absolute;
   top: 0;
@@ -47,6 +47,7 @@ nav ul {
   bottom: 0;
   margin: auto;
   cursor: pointer;
+  text-align: center;
 }
 
 #topbar .nav_btn {

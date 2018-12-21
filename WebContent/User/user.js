@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   // 显示面板
   showPanel();
   function showPanel() {
@@ -46,19 +46,60 @@ $(document).ready(function () {
 
 
   // 商品信息面板相关=========================
-  function getSrc(item_id){
+
+  function getSrc(item_id) {
     return '../Data/SecondHand/Item/' + item_id + '/cover.jpg'; //封面在服务器上存放的路径
   }
-  renderItemPic();
-  function renderItemPic(){
-    $('.item_card').each(function(){
-      let item_id = $(this).attr('item_id')
-      $(this).find('img').eq(0).attr('src',getSrc(item_id));
-      console.log(item_id);
+  renderItemPic();  // 该函数应该放在渲染出商品列表（页面DOM树生成）之后执行
+  function renderItemPic() {
+    $('.item_card').each(function () {
+      item_id = $(this).attr('item_id')
+      $(this).find('img').eq(0).attr('src', getSrc(item_id));
     })
   }
+  // 点击商品获取商品ID后跳转到商品页面
+  $('.item_card').click(function () {
+    item_id = $(this).attr('item_id');
+    // TODO: 由商品ID跳转到商品页面
+    window.location.href = '../Item/item.html' + '?' + item_id;
+  })
 
+  // 点击“发布-已售出”按钮
+  $('.publish_sold').click(function () {
+    event.stopPropagation();
+    item_id = $(this).parents('.item_card').attr('item_id');
+    $('#ensure_publish_sold').modal('toggle');
+  })
 
+  // 点击“发布-删除”按钮
+  $('.publish_delete').click(function () {
+    event.stopPropagation();
+    item_id = $(this).parents('.item_card').attr('item_id');
+    $('#ensure_publish_delete').modal('toggle');
+  })
+
+  // 点击“想要-删除”按钮
+  $('.want_delete').click(function () {
+    event.stopPropagation();
+    item_id = $(this).parents('.item_card').attr('item_id');
+    $('#ensure_want_delete').modal('show')
+  })
+
+  // 点击“查看卖家信息”按钮
+  $('.seller_info').click(function () {
+    event.stopPropagation();
+    item_id = $(this).parents('.item_card').attr('item_id');
+    $('#seller_info').modal('show')
+    // TODO: 发送Ajax请求渲染出模态框中的卖家信息，下方示例
+    // Ajax返回的对象
+    let seller_info = {
+      sellerName: '张先生',
+      sellerContactWay: 1,
+      sellerContact: '641411169'
+    }
+    // Ajax接收数据成功后执行的函数
+    renderSellerInfo(seller_info);
+  })
 
 
 });
