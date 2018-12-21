@@ -18,8 +18,8 @@
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.js"></script>
-   <script type="text/javascript">
-  var loca="${pageContext.request.contextPath}";
+  <script type="text/javascript">
+    var loca = "${pageContext.request.contextPath}";
   </script>
   <!-- 私有 -->
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Index/index.css">
@@ -53,7 +53,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.jsp">二手市场</a>
+            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.html">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -61,38 +61,45 @@
       </ul>
       <div class="title d-none d-md-block">
         校园猪&nbsp;|&nbsp;
-        <span class="school_name">安阳工学院</span>
+        <span class="school_name">SchoolName</span>
       </div>
+
+      <a class="nav_btn">
+        <span class="mdi mdi-apple-keyboard-caps"></span> 我发布的
+      </a>
+      <a class="nav_btn">
+        <span class="mdi mdi-cards-heart"></span> 我想要的
+      </a>
+      <a class="nav_btn">
+        <span class="mdi mdi-folder-star"></span> 收藏
+      </a>
+
       <div id="user_list">
-        <a href="${pageContext.request.contextPath}/User/user.jsp" id="user_name">
-          <span class="name">木牛牛马</span>
-          <img id="user_head" src="${pageContext.request.contextPath}/Data/User/1001/head.png"></img>
+        <a id="user_name">
+          <span class="name">UserName</span>
+          <img id="user_head" src=""></img>
           <span class="badge badge-pill badge-primary">8</span>
         </a>
+
         <div id="user_info">
           <ul>
-            <li>
-              <a href="">我发布的</a>
-            </li>
-            <li>
-              <a href="">我想要的</a>
-            </li>
-            <li>
-              <a href="">我收藏的</a>
-            </li>
-            <li>
-              <a href="">用户消息</a>
+            <li class="user_list_btn">
+              <a>用户消息</a>
               <span id="user_msg" class="badge badge-warning">4</span>
             </li>
-            <li>
-              <a href="">系统通知</a>
+            <li class="user_list_btn">
+              <a>系统通知</a>
               <span id="sys_msg" class="badge badge-warning">4</span>
+            </li>
+            <li class="user_list_btn">
+              <a>注销</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </nav>
+  <!-- TopBar -->
 
   <!-- 搜索框 -->
   <div id="search_box">
@@ -557,7 +564,7 @@
 
     <div class="item_list" class="">
       <div class="row">
-商品从这开始写 
+        商品从这开始写
         <!-- 商品模板 -->
         <div class="item col-6 col-lg-3">
 
