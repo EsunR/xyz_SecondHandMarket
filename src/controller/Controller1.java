@@ -99,12 +99,12 @@ public class Controller1 {
 	        }
 	        String fileName=file.getOriginalFilename();// 文件原名称
 	        String type=fileName.indexOf(".")!=-1?fileName.substring(fileName.lastIndexOf("."),fileName.length()):null;
-			file.transferTo(new File(realPath+id+type));
+			file.transferTo(new File(realPath+"cover"));
 			int i=1;
 			for (MultipartFile multipartFile : files) {
 				String fileName1=multipartFile.getOriginalFilename();// 文件原名称
 				String type1=fileName1.indexOf(".")!=-1?fileName1.substring(fileName1.lastIndexOf("."),fileName1.length()):null;
-				multipartFile.transferTo(new File(realPath+id+"_"+i+type1));
+				multipartFile.transferTo(new File(realPath+id+"_"+i));
 				i++;
 			}
 			mav.addObject("msg","1");

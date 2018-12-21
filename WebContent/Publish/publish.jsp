@@ -141,7 +141,7 @@
       </div>
       <div class="form-group col-6 col-md-4">
         <label for="oldPrice">原价</label>
-        <input class="form-control" type="text" name="oldPrice" id="oldPrice">
+        <input class="form-control" type="text" name="oldprice" id="oldPrice">
         <small class="form-text text-muted">您购买该商品时的价格</small>
       </div>
       <div class="form-group col-12 col-md-4">
@@ -184,12 +184,12 @@
 
       <div class="form-group col-md-5">
         <label for="sellername">称呼</label>
-        <input class="form-control" type="text" name="sellerName" id="sellerName" placeholder="您希望对方在交易时怎么称呼您">
+        <input class="form-control" type="text" name="sellername" id="sellerName" placeholder="您希望对方在交易时怎么称呼您">
       </div>
 
       <div class="form-group col-4 col-md-2">
         <label for="sellerContactWay">联系方式</label>
-        <select name="sellercontactWay" id="sellerContactWay" class="form-control">
+        <select name="sellercontactway" id="sellerContactWay" class="form-control">
           <option value="3" selected>手机</option>
           <option value="1">QQ</option>
           <option value="2">微信</option>
@@ -197,7 +197,7 @@
       </div>
       <div class="form-group col-8 col-md-5">
         <label for="sellercontact">联系号码</label>
-        <input type="text" name="sellerContact" class="form-control" id="sellerContact" placeholder="填写联系方式对应的号码">
+        <input type="text" name="sellercontact" class="form-control" id="sellerContact" placeholder="填写联系方式对应的号码">
       </div>
 
     </div>
