@@ -101,4 +101,9 @@ $(function () {
     renderSellerInfo(seller_info);
   })
 
+  // 执行Ajax
+  function render(){
+
+  }
+
 });

@@ -46,8 +46,9 @@ $(document).ready(function () {
   let sys_msg_num = parseInt($('#user_msg').text());
   $('#user_name .badge-primary').text(user_msg_num + sys_msg_num)
 
-  // 跳转按钮的链接
+  // TODO:　跳转按钮的链接
   let user_url = '../User/user.html'
+  
   let nav_btn_url = ['#publish', '#want', '#collection'];
   for (let i = 0; i < 3; i++) {
     $('.nav_btn').eq(i).click(function () {

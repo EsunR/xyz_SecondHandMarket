@@ -17,6 +17,7 @@ var item_id;
 function publish_sold() {
   console.log(item_id);
   // TODO: 发送Ajax请求，标记商品已被卖出
+
   $('#ensure_publish_sold').modal('hide');
   $('[item_id=' + item_id + ']').fadeOut();
 }
@@ -25,6 +26,7 @@ function publish_sold() {
 function publish_delete() {
   console.log(item_id);
   // TODO: 发送Ajax请求，删除商品信息
+
   $('#ensure_publish_delete').modal('hide');
   $('[item_id=' + item_id + ']').fadeOut();
 }
@@ -33,6 +35,7 @@ function publish_delete() {
 function want_delete() {
   console.log(item_id);
   // TODO: 发送Ajax请求，从我想要的列表中删除商
+  
   $('#ensure_want_delete').modal('hide');
   $('[item_id=' + item_id + ']').fadeOut();
 }
