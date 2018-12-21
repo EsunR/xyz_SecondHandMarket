@@ -1,9 +1,9 @@
 // 显示用户修改的头像
 function showPreview(source) {
   var file = source.files[0];
-  if(window.FileReader) {
+  if (window.FileReader) {
     var fr = new FileReader();
-    fr.onloadend = function(e) {
+    fr.onloadend = function (e) {
       document.getElementById('user_head_preview').src = e.target.result;
     }
     fr.readAsDataURL(file);
@@ -38,8 +38,19 @@ function want_delete() {
 }
 
 // 渲染卖家信息
-function renderSellerInfo(seller_info){
+function renderSellerInfo(seller_info) {
   $('#seller_name span').eq(0).text(seller_info.sellerName);
-  $('seller_contact span').eq(0).text(seller_info.sellerContact);
-  $('seller_contact span').eq(1).text(seller_info.sellerContactWay);
+  $('#seller_contact span').eq(0).text(seller_info.sellerContact);
+  let $contactWay = $('#seller_contact span').eq(1)
+  switch (seller_info.sellerContactWay) {
+    case 1:
+      $contactWay.text('QQ');
+      break;
+    case 2:
+      $contactWay.text('微信');
+      break;
+    case 3:
+      $contactWay.text('电话');
+      break;
+  }
 }

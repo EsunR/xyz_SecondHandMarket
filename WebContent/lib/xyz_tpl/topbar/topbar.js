@@ -12,6 +12,7 @@ $(document).ready(function () {
 
 
   // TODO: 将其移动到获取用户信息后的Ajax回调函数中
+  
   // 返回数据示例：
   var user_info = {
     id: 1001,

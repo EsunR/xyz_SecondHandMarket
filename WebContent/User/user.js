@@ -94,12 +94,11 @@ $(function () {
     // Ajax返回的对象
     let seller_info = {
       sellerName: '张先生',
-      sellerContactWay: 1,
+      sellerContactWay: 2,
       sellerContact: '641411169'
     }
     // Ajax接收数据成功后执行的函数
     renderSellerInfo(seller_info);
   })
 
-  console.log(USERID);
 });
