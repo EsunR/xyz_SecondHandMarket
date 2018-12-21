@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import mapper.Item1Mapper;
 import mapper.ItemMapper;
 import mapper.UserMapper;
 import pojo.Item;
 import pojo.ItemExample;
 import pojo.User;
+import pojo.UserAndItem;
 import pojo.UserExample;
 import pojo.UserExample.Criteria;
 import service.Service;
@@ -21,6 +23,8 @@ public class ServiceImpl implements Service {
 	private UserMapper userMapper;
 	@Autowired
 	private ItemMapper itemMapper;
+	@Autowired 
+	private Item1Mapper item1Mapper;
 	@Override
 	public User findUserByUserName(User user) {
 		UserExample example=new UserExample();
@@ -38,8 +42,8 @@ public class ServiceImpl implements Service {
 		
 	}
 	@Override
-	public Item findItemById(Integer itemid) {
-		userMapper.selectByItemId();
+	public UserAndItem findItemById(Integer itemid) {
+		List<UserAndItem> list=item1Mapper.findItemById(itemid);
 		return list.get(0);
 	}
 	@Override
@@ -47,6 +51,13 @@ public class ServiceImpl implements Service {
 		ItemExample example=new ItemExample();
 		List<Item> list = itemMapper.selectByExample(example);
 		return list;
+	}
+	@Transactional
+	public int addItem(Item item) {
+		 itemMapper.insertSelective(item);
+		int ss= item.getId();
+		return ss;
+		
 	}
 
 }

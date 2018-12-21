@@ -4,6 +4,7 @@ import java.util.List;
 
 import pojo.Item;
 import pojo.User;
+import pojo.UserAndItem;
 
 
 public interface Service {
@@ -12,8 +13,10 @@ public interface Service {
 
 	void addUser(User user);
 
-	Item findItemById(Integer itemid);
+	UserAndItem findItemById(Integer itemid);
 
 	List<Item> findAllItem();
+
+	int addItem(Item item);
 
 }

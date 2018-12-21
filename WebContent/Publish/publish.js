@@ -33,9 +33,16 @@ $(document).ready(function () {
     initialPreviewShowDelete: true,
     frameClass: 'pic krajee-default',
   });
-  
   //  TODO : 发布商品
-  $('#publish_btn').click(function(){
-	  console.log(1);
-  })
+  /*$('#publish_btn').click(function(){
+	  $.ajax({
+  	    type: "post",
+  	    dataType:"json",
+  	    data:{files:$("#upload_pic").val()},
+  	    url: loca+"/publishs",
+  	    processData: false, 
+  	    contentType:false,
+  	    async:false,
+  	  });
+  })*/
 });

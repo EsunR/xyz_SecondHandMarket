@@ -66,7 +66,7 @@ $(document).ready(function () {
 
   // 点击跳转
   $(".item").click(function () {  
-    window.location.href = loca+'/Item.action?' + 'itemid=' + $(this).attr("item-id");
+    window.location.href = loca+'/Items/'+ $(this).attr("item-id");
   })
 
 });

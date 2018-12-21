@@ -96,26 +96,26 @@
       <div class="item_cover col-lg-6">
         <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/1001/cover.jpg" alt="">
         <div class="item_condition_box">
-          <div class="item_condition">9新</div>
+          <div class="item_condition">${list.conditions}新</div>
         </div>
       </div>
       <div class="item_detail col-lg-6">
         <div class="item_detail_inner">
           <!-- 商品信息 -->
-          <label>商品名称：</label>
+          <label>商品名称：${list.title}</label>
           <div class="item_name item_text">
-            棒球帽，加绒，原价99，现在只需10元！包邮！包邮！包邮！包邮！包邮！包邮！快来啊！
+            ${list.description}
           </div>
-          <label>原价：</label>
-          <div class="old_price item_text">￥998</div>
+          <label>原价</label>
+          <div class="old_price item_text">￥${list.oldprice}</div>
           <label>现价：</label>
-          <div class="price item_text">￥9.8</div>
+          <div class="price item_text">￥${list.price}</div>
           <label>折扣幅度：</label>
           <div class="percent"></div>
           <label>卖家：</label>
           <div class="seller">
-            <span class="seller_name">张*犬</span>
-            <span class="seller_level badge badge-success">极好</span>
+            <span class="seller_name">${list.name}</span>
+            <span class="seller_level badge badge-success">${list.level}</span>
           </div>
           <hr class="d-block d-xl-none">
           <div class="row btn_box">

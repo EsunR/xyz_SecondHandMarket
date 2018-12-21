@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.Item1Mapper" >
+ <select id="findItemById"  parameterType="java.lang.Integer" resultType="pojo.UserAndItem">
+    select 
+     i.id,i.title,i.price,i.oldprice,i.conditions,i.sellerid,i.description,i.sellername,i.sellercontactway,i.sellercontact,
+    
+    u.name,u.realname,u.school,u.level,u.phone,u.qq,u.wechat,u.password
+    from item i,user u
+    where i.id = #{id} and u.id=i.sellerId
+  </select>
+</mapper>

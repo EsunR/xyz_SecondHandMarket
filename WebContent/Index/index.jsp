@@ -99,7 +99,7 @@
     <div id="index_subtitle">二手物品发布 & 交易市场</div>
     <button id="publish" class="btn btn-outline-light" type="button">
       <img src="${pageContext.request.contextPath}/Index/img/publish.png" alt="">
-      <a href=".${pageContext.request.contextPath}/Index/Publish/publish.html">发布物品</a>
+      <a href="./Publish/publish.html">发布物品</a>
     </button>
     <form id="search" class="container" action="">
       <div class="input-group">

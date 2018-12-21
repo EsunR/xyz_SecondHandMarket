@@ -115,7 +115,7 @@
       #{description,jdbcType=VARCHAR}, #{sellername,jdbcType=VARCHAR}, #{sellercontactway,jdbcType=INTEGER}, 
       #{sellercontact,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="pojo.Item" >
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="pojo.Item" >
     insert into item
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
