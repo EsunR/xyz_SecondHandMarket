@@ -8,24 +8,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- jquery -->
-  <script src="../lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="${pageContext.request.contextPath}/lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
   <!-- bootstrap -->
-  <script src="../lib/bootstrap/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+  <script src="${pageContext.request.contextPath}/lib/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/bootstrap/bootstrap.min.css">
 
   <!-- md icon -->
-  <link rel="stylesheet" href="../lib/md-fonts/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/md-fonts/css/materialdesignicons.min.css">
   <!-- xyz -->
-  <link rel="stylesheet" href="../lib/xyz_tpl/topbar/topbar.css">
-  <script src="../lib/xyz_tpl/topbar/topbar.js"></script>
-  <link rel="stylesheet" href="../lib/xyz_tpl/top_btn/top_btn.css">
-  <script src="../lib/xyz_tpl/top_btn/top_btn.js"></script>
-  <link rel="stylesheet" href="../lib/xyz_tpl/footer/footer.css">
+     <script type="text/javascript">
+    var loca = "${pageContext.request.contextPath}";
+  </script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
+  <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.css">
+  <script src="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/footer/footer.css">
   <!-- self -->
-  <link rel="stylesheet" href="./user.css">
-  <script src="./user.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/User/user.css">
+  <script src="${pageContext.request.contextPath}/User/user.js" type="text/javascript"></script>
   <title>Document</title>
-  <script src="./user_gloable.js"></script>
+  <script src="${pageContext.request.contextPath}/User/user_gloable.js"></script>
 </head>
 
 <body>
@@ -52,7 +55,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="../Index/index.html">二手市场</a>
+            <a class="dropdown-item" href="../Index/index.jsp">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -243,53 +246,54 @@
           <div id="user_img_name" class="col-md-6">
             <div class="inner">
               <img id="user_head_preview" src="../Data/User/1001/head" alt="" srcset="">
-              <div id="user_info_name">EsunR</div>
+              <div id="user_info_name">${user.name}</div>
             </div>
           </div>
           <div class="col-md-6" id="user_info_box">
-            <form>
+            <form id="ss1">
               <fieldset disabled>
+              <input type="hidden" name="id" value="${user.id}">
                 <div class="row">
                   <div class="form-group col-6">
                     <label for="userName">用户名</label>
-                    <input type="text" id="userName" class="form-control" value="EsunR">
+                    <input type="text" id="name" name="name"  class="form-control" value="${user.name}">
                   </div>
-
+					
                   <div class="form-group col-6">
                     <label for="realName">真实姓名</label>
-                    <input type="text" id="realName" class="form-control" value="蛤蛤">
+                    <input type="text" id="realname" name="realname" class="form-control" value="${user.realname}">
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="school">所在学校</label>
-                  <input type="text" id="school" class="form-control" value="安阳工学院">
+                  <input type="text" id="school" name="school"  class="form-control" value="${user.school}">
                 </div>
 
                 <div class="form-group">
                   <label for="phone">联系电话</label>
-                  <input type="text" id="phone" class="form-control" value="15670023772">
+                  <input type="text" id="phone" name="phone"  class="form-control" value="${user.phone}">
                 </div>
 
                 <div class="form-group">
                   <label for="qq">QQ</label>
-                  <input type="text" id="qq" class="form-control" value="641411169">
+                  <input type="text" id="qq" name="qq"  class="form-control" value="${user.qq}">
                 </div>
 
                 <div class="form-group">
                   <label for="wechat">微信</label>
-                  <input type="text" id="wechat" class="form-control" value="esunr641">
+                  <input type="text" id="wechat" name="wechat"   class="form-control" value="${user.wechat}">
                 </div>
                 <div class="file_btn">
-                  <input type="file" id="file" onchange="showPreview(this)" />
+                  <input type="file" id="file" name="file"  onchange="showPreview(this)" />
                   <button class="btn btn-success">修改头像</button>
                 </div>
               </fieldset>
-            </form>
             <div class="btn_box">
-              <button id="change" class="btn btn-danger">更改信息</button>
-              <button id="submit_change" class="btn btn-" disabled>提交更改</button>
+              <button id="change" class="btn btn-danger" type="button">更改信息</button>
+              <button id="submit_change" class="btn btn-" type="button" disabled>提交更改</button>
             </div>
+            </form>
           </div>
         </div>
       </div>

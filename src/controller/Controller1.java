@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -40,11 +41,12 @@ public class Controller1 {
 	
 	@ResponseBody
 	@RequestMapping("login")
-	public Map<String,Object> login( User user,Model model){
+	public Map<String,Object> login( User user,Model model,HttpSession session){
 		Map<String, Object> map=new HashMap<String, Object>();
 		try {
 			User user1=service.findUserByUserName(user);
 			if(user1!=null&&user1.getPassword().equals(user.getPassword())) {
+				session.setAttribute("user",user1);
 				map.put("msg","1");
 			return map;
 			}else {
@@ -84,6 +86,21 @@ public class Controller1 {
 		mav.addObject("list",item);
 		mav.setViewName("Index/index");
 		return mav;
+	}  
+	@ResponseBody
+	@RequestMapping("userUpdate")
+	public Map<String, Object> userUpdate(User user, HttpSession session){
+		try {
+			Map<String, Object> map=new HashMap<String, Object>();
+			service.userUpdate(user);
+			session.setAttribute("user",user);
+			map.put("msg", 1);
+			return map;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		 
 	}  
 	@RequestMapping(value="publishs", produces=MediaType.TEXT_PLAIN_VALUE+";charset=utf-8")
 	public ModelAndView publish(Item item,@RequestParam(value = "file", required = false) MultipartFile file,@RequestParam(value = "files", required = false) List<MultipartFile> files,HttpServletRequest request){

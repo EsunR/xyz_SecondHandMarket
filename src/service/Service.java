@@ -19,4 +19,6 @@ public interface Service {
 
 	int addItem(Item item);
 
+	void userUpdate(User user);
+
 }

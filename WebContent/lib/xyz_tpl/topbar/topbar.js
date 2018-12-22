@@ -6,7 +6,7 @@ $(document).ready(function () {
     USERID = user_info.id
     $('#topbar .school_name').eq(0).text(user_info.school);
     $('#user_name .name').eq(0).text(user_info.name);
-    $('#user_head').attr('src','../Data/User/' + USERID + '/head')
+    $('#user_head').attr('src',loca+'/Data/User/' + USERID + '/head')
   }
 
 
@@ -28,10 +28,10 @@ $(document).ready(function () {
 
   // 跳转主页
   $("#topbar .title").eq(0).click(function () {
-    window.location.href = '../Index/index.html'
+    window.location.href = loca+'/Index/index.jsp'
   })
   $('.home_btn').eq(0).click(function () {
-    window.location.href = '../Index/index.html'
+    window.location.href = loca+'/Index/index.jsp'
   })
 
   // 消息通知下拉动画
@@ -47,7 +47,7 @@ $(document).ready(function () {
   $('#user_name .badge-primary').text(user_msg_num + sys_msg_num)
 
   // TODO:　跳转按钮的链接
-  let user_url = '../User/user.html'
+  let user_url = loca+'/User/user.jsp'
   
   let nav_btn_url = ['#publish', '#want', '#collection'];
   for (let i = 0; i < 3; i++) {
@@ -65,7 +65,7 @@ $(document).ready(function () {
     window.location.href = user_url + '#sysMsg'
   })
   $('.user_list_btn').eq(2).click(function () {
-    window.location.href = '../Login/login.html'
+    window.location.href = loca+'/Login/login.jsp'
   })
 
 

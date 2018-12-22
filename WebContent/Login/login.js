@@ -57,7 +57,7 @@ $(function () {
     	    }
     	    },
     	    error:function(data){
-    	    	console.log("系统出错");
+    	    	warning("系统出错");
     	    }
     	  });
     }else{

@@ -40,7 +40,24 @@ $(function () {
   // 点击“提交更改”按钮
   $('#submit_change').click(function () {
     // TODO: 提交更改信息
-    console.log('提交更改');
+	  $.ajax({
+	  	    type: "post",
+	  	    dataType:"json",
+	  	    data:$('#ss1').serialize(),
+	  	    url: loca+"/userUpdate",
+	  	    async:false,
+	  	  success:function(data) {
+	    	    if(data.msg==1){
+	    	    	window.location.reload();
+	    	    }
+	    	    else{
+	    	    	alert(信息异常);
+	    	    }
+	    	    },
+	    	    error:function(data){
+	    	    	alert("系统出错");
+	    	    }
+	  	  });
   })
 
 
@@ -48,7 +65,7 @@ $(function () {
   // 商品信息面板相关=========================
 
   function getSrc(item_id) {
-    return '../Data/SecondHand/Item/' + item_id + '/cover.jpg'; //封面在服务器上存放的路径
+    return loca+'/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
   }
   renderItemPic();  // 该函数应该放在渲染出商品列表（页面DOM树生成）之后执行
   function renderItemPic() {
@@ -61,7 +78,7 @@ $(function () {
   $('.item_card').click(function () {
     item_id = $(this).attr('item_id');
     // TODO: 由商品ID跳转到商品页面
-    window.location.href = '../Item/item.html' + '?' + item_id;
+    window.location.href = loca+'/Items/' + item_id;
   })
 
   // 点击“发布-已售出”按钮

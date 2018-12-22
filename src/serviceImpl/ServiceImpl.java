@@ -59,5 +59,9 @@ public class ServiceImpl implements Service {
 		return ss;
 		
 	}
+	@Transactional
+	public void userUpdate(User user) {
+		userMapper.updateByPrimaryKeySelective(user);
+	}
 
 }

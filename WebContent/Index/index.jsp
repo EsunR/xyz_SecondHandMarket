@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -14,13 +15,13 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/md-fonts/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/normalize/normalize.css">
   <!-- xyz组件 -->
+  <script type="text/javascript">
+    var loca = "${pageContext.request.contextPath}";
+  </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.js"></script>
-  <script type="text/javascript">
-    var loca = "${pageContext.request.contextPath}";
-  </script>
   <!-- 私有 -->
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Index/index.css">
   <script src="${pageContext.request.contextPath}/Index/index.js"></script>
@@ -53,7 +54,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.html">二手市场</a>
+            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.jsp">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -566,6 +567,34 @@
       <div class="row">
         商品从这开始写
         <!-- 商品模板 -->
+        <c:forEach items="${list}" var="list">
+        <div class="item col-6 col-lg-3" item-id="${list.id}">
+          <div class="item_innerbox">
+            <div class="img_border">
+              <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/cover" alt="">
+            </div>
+            <div class="price_box clearfix">
+              <div class="percent">-99%</div>
+              <div class="price clearfix">
+                <div class="now">￥${list.price}</div>
+                <div class="old">￥${list.oldprice}</div>
+              </div>
+            </div>
+            <div class="item_title">
+              <a>${list.title}</a>
+            </div>
+            <div class="seller clearfix">
+              <div class="seller_name">
+                <span class="mdi mdi-account-box"></span>${list.name}
+              </div>
+              <div class="seller_level">信誉等级：<span>${list.level}</span></div>
+            </div>
+          </div>
+        </div>
+        </c:forEach>
+        <!-- --------- -->
+
+       <%--  <!-- 商品模板 -->
         <div class="item col-6 col-lg-3">
 
           <div class="item_innerbox">
@@ -758,35 +787,7 @@
             </div>
           </div>
 
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
+        </div> --%>
         <!-- --------- -->
 
 
