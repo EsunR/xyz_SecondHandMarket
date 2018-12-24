@@ -53,7 +53,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.html">二手市场</a>
+            <a class="dropdown-item" href="../Index/index.jsp">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -61,7 +61,7 @@
       </ul>
       <div class="title d-none d-md-block">
         校园猪&nbsp;|&nbsp;
-        <span class="school_name">SchoolName</span>
+        <span class="school_name">${user.school}</span>
       </div>
 
       <a class="nav_btn">
@@ -76,7 +76,7 @@
 
       <div id="user_list">
         <a id="user_name">
-          <span class="name">UserName</span>
+          <span class="name">${user.name}</span>
           <img id="user_head" src=""></img>
           <span class="badge badge-pill badge-primary">8</span>
         </a>
@@ -105,6 +105,11 @@
     <input type="hidden" id="ss3" userId="${user.id}" itemId="${list.id}" >
   <!-- 商品信息 -->
   <div id="item_info" class="container">
+  	<div class=" item_card row area_title">
+	  	<div class="col-12">
+	  		<span class="title">基本信息 <span class="mdi mdi-tag-faces"></span></span>
+	  	</div>
+  	</div>
     <div class="row">
       <div class="item_cover col-lg-6">
         <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/cover" alt="">
@@ -115,17 +120,17 @@
       <div class="item_detail col-lg-6">
         <div class="item_detail_inner">
           <!-- 商品信息 -->
-          <label>商品名称：${list.title}</label>
+          <label>商品名称</label>
           <div class="item_name item_text">
-            ${list.description}
+            ${list.title}
           </div>
           <label>原价</label>
-          <div class="old_price item_text">￥${list.oldprice}</div>
-          <label>现价：</label>
-          <div class="price item_text">￥${list.price}</div>
-          <label>折扣幅度：</label>
+          <div class="old_price item_text">RMB: ${list.oldprice}</div>
+          <label>现价</label>
+          <div class="price item_text">RMB: ${list.price}</div>
+          <label>折扣幅度</label>
           <div class="percent"></div>
-          <label>卖家：</label>
+          <label>卖家</label>
           <div class="seller">
             <span class="seller_name">${list.name}</span>
             <span class="seller_level badge badge-success">${list.level}</span>
@@ -232,7 +237,7 @@
 
       <div class="description_text item_card row">
         <div class="col-12">
-          ${list.title}
+          ${list.description}
         </div>
       </div>
     </div>
@@ -260,19 +265,21 @@
             <div id="message_null">
               这里还没有留言，快来留言吧！
             </div>
-            <!-- 留言模板 -->
+
+            <!-- 留言模板
             <div class="message row">
               <div class="messager_head col-3">
                 <img src="${pageContext.request.contextPath}/Data/User/1001/head">
               </div>
               <div class="messager_info col-9">
                 <div class="msg">
-                  这顶帽子挺不错的，能帮我留着吗。
+                  	这顶帽子挺不错的，能帮我留着吗。
                 </div>
                 <div class="messager_name">From：<span>EsunR</span></div>
               </div>
             </div>
-            <!-- 留言模板 -->
+                                   留言模板 -->
+            
           </div>
           <!-- 撰写留言 -->
           <form id="leave_msg" action="">

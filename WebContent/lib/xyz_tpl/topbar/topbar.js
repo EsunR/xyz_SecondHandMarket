@@ -3,10 +3,10 @@ var USERID;
 $(document).ready(function () {
   // 渲染Topbar中的用户信息
   function renderTopbar(user_info) {
-    USERID = user_info.id
-    $('#topbar .school_name').eq(0).text(user_info.school);
-    $('#user_name .name').eq(0).text(user_info.name);
-    $('#user_head').attr('src',loca+'/Data/User/' + USERID + '/head')
+    // USERID = user_info.id
+    // $('#topbar .school_name').eq(0).text(user_info.school);
+    // $('#user_name .name').eq(0).text(user_info.name);
+    $('#user_head').attr('src',loca+'/Data/User/Default/head')
   }
 
 

@@ -18,6 +18,13 @@ body {
   }
 }
 
+// 模态框
+#seller_name{
+  span{
+    margin-left: 5px;
+  }
+}
+
 #main_box {
   box-shadow: $shadow;
   border-radius: 10px;

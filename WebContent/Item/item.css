@@ -11,6 +11,23 @@ body ul {
   margin-top: 1rem;
 }
 
+#item_info .area_title .col-12 {
+  background-color: #fec018;
+  height: 80px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#item_info .area_title .col-12 .title {
+  font-size: 2rem;
+  line-height: 80px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
 #item_info .item_cover {
   position: relative;
   padding: 0;
@@ -78,7 +95,7 @@ body ul {
   margin-top: 15px;
   margin-bottom: 0px;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.5);
+  font-weight: 100;
 }
 
 #item_info .item_detail label:first-child {
@@ -94,11 +111,11 @@ body ul {
 #item_info .item_detail .item_text {
   font-size: 1.3rem;
   color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
 }
 
 #item_info .item_detail .old_price {
-  text-decoration: line-through;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 #item_info .item_detail .percent {
@@ -116,6 +133,7 @@ body ul {
 #item_info .item_detail .seller span {
   font-size: 1.3rem;
   margin-right: 5px;
+  font-weight: bold;
 }
 
 #item_info .item_detail .seller .badge {
@@ -196,11 +214,10 @@ body ul {
   height: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  color: white;
 }
 
 #item_description .area_title .col-12 {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background: #fec018;
 }
 
 #item_description .area_title span {
@@ -250,10 +267,9 @@ body ul {
 
 #center #message_board .inner .title {
   cursor: default;
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background: #fec018;
   line-height: 4rem;
   text-align: center;
-  color: #fff;
   font-size: 1.5rem;
 }
 
