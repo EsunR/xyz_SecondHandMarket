@@ -336,6 +336,7 @@
               </div>
             </div>
           </div>
+          
           </c:forEach>
           <!-- 模板 -->
 
@@ -348,7 +349,7 @@
         <div class="row">
 			<c:forEach var="userwant" items="${userwant}">
           <!-- 模板 -->
-          <div class="item_card col-lg-6" item_id="${userwant.id}">
+          <div class="item_card col-lg-6" item_id="${userwant.id}" item_>
             <div class="row">
               <div class="img_box col-4">
                 <img class="item_img" src="" test="1111">

@@ -160,7 +160,6 @@ $(function () {
     renderSellerInfo(seller_info);
   })
 
-  console.log(userwant);
   // 执行Ajax
   function render(){
 
