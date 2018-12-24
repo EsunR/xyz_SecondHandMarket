@@ -205,12 +205,12 @@
         </div>
         <div class="modal-body">
           <div id="seller_name">
-            卖家称呼：<span>张先生</span>
+            卖家称呼：<span>${list.name}</span>
           </div>
           <div id="seller_contact">
             联系方式：
-            <span>641411169</span>
-            <span class="badge badge-pill badge-primary">QQ</span>
+            <span>${list.sellercontact}</span>
+            <span class="badge badge-pill badge-primary">${list.sellercontactway}</span>
           </div>
         </div>
         <div class="modal-footer">

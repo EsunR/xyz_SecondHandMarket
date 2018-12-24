@@ -13,7 +13,7 @@ $(document).ready(function () {
       $.ajax({
     	    type: "post",
     	    dataType:"json",
-    	    data:{item_id:$("#ss3").attr("userId"),user_id:$("#ss3").attr("itemId")},
+    	    data:{user_id:$("#ss3").attr("itemId"),item_id:$("#ss3").attr("userId")},
     	    url: loca+"/iwant",
     	    async:false,
     	  });

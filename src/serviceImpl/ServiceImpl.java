@@ -81,7 +81,7 @@ public class ServiceImpl implements Service {
 	}
 	@Override
 	public List<UserAndItem> findUserWantByUserId(Integer userid) {
-		List<UserAndItem> list = item1Mapper.findUserWantByUserId();
+		List<UserAndItem> list = item1Mapper.findUserWantByUserId(userid);
 		return list;
 	}
 	@Override
