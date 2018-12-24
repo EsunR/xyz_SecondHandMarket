@@ -101,6 +101,7 @@
   <!-- TopBar -->
 
 
+    <input type="hidden" id="ss3" userId="${user.id}" itemId="${list.id}" >
   <!-- 商品信息 -->
   <div id="item_info" class="container">
     <div class="row">

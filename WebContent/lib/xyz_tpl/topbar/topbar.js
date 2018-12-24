@@ -28,10 +28,10 @@ $(document).ready(function () {
 
   // 跳转主页
   $("#topbar .title").eq(0).click(function () {
-    window.location.href = loca+'/Index/index.jsp'
+    window.location.href = loca+'/indexs'
   })
   $('.home_btn').eq(0).click(function () {
-    window.location.href = loca+'/Index/index.jsp'
+    window.location.href = loca+'/indexs'
   })
 
   // 消息通知下拉动画

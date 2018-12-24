@@ -8,12 +8,14 @@ import org.springframework.transaction.annotation.Transactional;
 import mapper.Item1Mapper;
 import mapper.ItemMapper;
 import mapper.UserMapper;
+import mapper.WantMapper;
 import pojo.Item;
 import pojo.ItemExample;
 import pojo.User;
 import pojo.UserAndItem;
 import pojo.UserExample;
 import pojo.UserExample.Criteria;
+import pojo.Want;
 import service.Service;
 
 @org.springframework.stereotype.Service
@@ -25,6 +27,8 @@ public class ServiceImpl implements Service {
 	private ItemMapper itemMapper;
 	@Autowired 
 	private Item1Mapper item1Mapper;
+	@Autowired 
+	private WantMapper wantMapper;
 	@Override
 	public User findUserByUserName(User user) {
 		UserExample example=new UserExample();
@@ -62,6 +66,11 @@ public class ServiceImpl implements Service {
 	@Transactional
 	public void userUpdate(User user) {
 		userMapper.updateByPrimaryKeySelective(user);
+	}
+	@Override
+	public void addWant(Want want) {
+		wantMapper.addWant(want);
+		
 	}
 
 }

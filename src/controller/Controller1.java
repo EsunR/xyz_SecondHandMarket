@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import pojo.Item;
 import pojo.User;
 import pojo.UserAndItem;
+import pojo.Want;
 import service.Service;
 
 @Controller
@@ -86,6 +87,10 @@ public class Controller1 {
 		mav.addObject("list",item);
 		mav.setViewName("Index/index");
 		return mav;
+	}  
+	@RequestMapping("iwant")
+	public void iwant(Want want){
+		service.addWant(want);
 	}  
 	@ResponseBody
 	@RequestMapping("userUpdate")

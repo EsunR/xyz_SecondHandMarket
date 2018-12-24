@@ -5,6 +5,7 @@ import java.util.List;
 import pojo.Item;
 import pojo.User;
 import pojo.UserAndItem;
+import pojo.Want;
 
 
 public interface Service {
@@ -20,5 +21,7 @@ public interface Service {
 	int addItem(Item item);
 
 	void userUpdate(User user);
+
+	void addWant(Want want);
 
 }

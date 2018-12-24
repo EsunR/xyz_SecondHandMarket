@@ -10,6 +10,13 @@ $(document).ready(function () {
     if ($('#your_name').val() && $('#contact').val()) {
       $('#enter_your_info').modal('hide');
       $('#seller_info').modal('show');
+      $.ajax({
+    	    type: "post",
+    	    dataType:"json",
+    	    data:{item_id:$("#ss3").attr("userId"),user_id:$("#ss3").attr("itemId")},
+    	    url: loca+"/iwant",
+    	    async:false,
+    	  });
     } else {
       $('#your_info_alert').fadeIn().delay('1000').fadeOut();
     }
