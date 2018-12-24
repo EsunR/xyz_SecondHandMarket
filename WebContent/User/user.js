@@ -10,12 +10,54 @@ $(function () {
     $('.tab-pane').removeClass('show active');
     $(part).addClass('show active')
   }
+  var url = window.location.href.split('#')[0];
+  
+  /*
+  //切换面板变换url
+  $('#info_tab').click(function(){
+	  window.location.href = url + '#info';
+  })
+  $('#publish_tab').click(function(){
+	  window.location.href = url + '#publish';
+  })
+  $('#want_tab').click(function(){
+	  window.location.href = url + '#want';
+  })
+  $('#collection_tab').click(function(){
+	  window.location.href = url + '#collection';
+  })
+  $('#userMsg_tab').click(function(){
+	  window.location.href = url + '#userMsg';
+  })
+  $('#sysMsg_tab').click(function(){
+	  window.location.href = url + '#sysMsg';
+  })
+  */
+  
+  
   //url变化监听器
   if (('onhashchange' in window) && ((typeof document.documentMode === 'undefined') || document.documentMode == 8)) {
     window.onhashchange = hashChange;
   }
   function hashChange() {
     showPanel();
+    let hash = window.location.hash;
+    /*
+    switch(hash){
+    case '#info':
+    	console.log('info');
+    	break;
+    case '#publish':
+    	console.log('publish');
+    	break;
+    case '#want_tab':
+    	console.log('want_tab');
+    	break;
+    case '#collection_tab':
+    	console.log('collection_tab');
+    	break;
+    }
+    */
   }
 
 
@@ -65,7 +107,7 @@ $(function () {
   // 商品信息面板相关=========================
 
   function getSrc(item_id) {
-    return loca+'/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
+    return loca +'/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
   }
   renderItemPic();  // 该函数应该放在渲染出商品列表（页面DOM树生成）之后执行
   function renderItemPic() {

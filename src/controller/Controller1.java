@@ -39,6 +39,24 @@ public class Controller1 {
 		mav.setViewName("../Item/item");
 		return mav;
 	} 
+	@RequestMapping("/Users/{userid}")
+	public ModelAndView userjsp(@PathVariable Integer userid){
+		ModelAndView mav = new ModelAndView();
+		List<Item> item=service.findItemBySellerId(userid);
+		List<UserAndItem> userAndItem=service.findUserWantByUserId(userid);
+		mav.addObject("userpublish", item);
+		mav.addObject("userwant", userAndItem);
+		mav.setViewName("../User/user");
+		return mav;
+	} 
+	@RequestMapping("/Searchs/{title}")
+	public ModelAndView userjsp(@PathVariable String title){
+		ModelAndView mav = new ModelAndView();
+		List<UserAndItem> item=service.findItemBySellerTitle(title);
+		mav.addObject("searchItem", item);
+		mav.setViewName("../Search/search");
+		return mav;
+	} 
 	
 	@ResponseBody
 	@RequestMapping("login")
@@ -59,7 +77,9 @@ public class Controller1 {
 			return null;
 		}
 		
-	}  
+	} 
+	
+  
 	@ResponseBody
 	@RequestMapping("register")
 	public Map<String,Object> register( User user,Model model){

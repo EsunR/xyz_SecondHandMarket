@@ -16,6 +16,7 @@
   <!-- xyz组件 -->
    <script type="text/javascript">
     var loca = "${pageContext.request.contextPath}";
+    var itemid="${user.id}";
   </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
@@ -106,7 +107,7 @@
   <div id="item_info" class="container">
     <div class="row">
       <div class="item_cover col-lg-6">
-        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/1001/cover.jpg" alt="">
+        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/cover" alt="">
         <div class="item_condition_box">
           <div class="item_condition">${list.conditions}新</div>
         </div>
@@ -231,7 +232,7 @@
 
       <div class="description_text item_card row">
         <div class="col-12">
-          这是一顶不是绿色的帽子。
+          ${list.title}
         </div>
       </div>
     </div>
@@ -242,10 +243,11 @@
     <div class="row item_card">
       <div id="item_pic" class="col-md-7 col-lg-8">
         <!-- 展示图片 -->
-        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/1001/1001_1.jpg" alt="">
-        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/1001/1001_2.jpg" alt="">
-        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/1001/1001_3.jpg" alt="">
-        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/1001/1001_4.jpg" alt="">
+        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/${list.id}_1" alt="">
+        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/${list.id}_2" alt="">
+        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/${list.id}_3" alt="">
+        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/${list.id}_4" alt="">
+        <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/${list.id}_5" alt="">
       </div>
       <div id="message_board" class="col-md-5 col-lg-4">
         <div class="inner">
@@ -261,7 +263,7 @@
             <!-- 留言模板 -->
             <div class="message row">
               <div class="messager_head col-3">
-                <img src="${pageContext.request.contextPath}/Data/User/1001/head.png">
+                <img src="${pageContext.request.contextPath}/Data/User/1001/head">
               </div>
               <div class="messager_info col-9">
                 <div class="msg">

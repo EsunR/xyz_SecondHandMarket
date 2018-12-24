@@ -17,11 +17,14 @@
   <!-- xyz组件 -->
   <script type="text/javascript">
     var loca = "${pageContext.request.contextPath}";
+    var itemid="${user.id}";
   </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/search_bar/search_bar.css">
+  <script src="${pageContext.request.contextPath}/lib/xyz_tpl/search_bar/search_bar.js"></script>
   <!-- 私有 -->
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Index/index.css">
   <script src="${pageContext.request.contextPath}/Index/index.js"></script>
@@ -103,29 +106,31 @@
   <!-- TopBar -->
 
   <!-- 搜索框 -->
-  <div id="search_box">
-    <div id="index_subtitle">二手物品发布 & 交易市场</div>
-    <button id="publish" class="btn btn-outline-light" type="button">
-      <img src="${pageContext.request.contextPath}/Index/img/publish.png" alt="">
-      <a href="${pageContext.request.contextPath}/Publish/publish.jsp">发布物品</a>
-    </button>
-    <form id="search" class="container" action="">
-      <div class="input-group">
-        <input id="search_input" type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want"
-          aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-outline-light" type="button">
-            搜索
-            <span class="mdi mdi-magnify"></span>
-          </button>
-        </div>
-      </div>
+	<div id="search_box">
+	  <div id="index_subtitle">二手物品发布 & 交易市场</div>
+	  <button id="publish" class="btn btn-outline-light" type="button">
+	    <img src="" alt="">
+	    <a href="${pageContext.request.contextPath}/Publish/publish.jsp">发布物品</a>
+	  </button>
+	  <form id="search" class="container" action="">
+	    <div class="input-group">
+	      <input id="search_input" type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want"
+	        aria-describedby="basic-addon2">
+	      <div class="input-group-append">
+	        <button class="btn btn-outline-light" type="button">
+	          搜索
+	          <span class="mdi mdi-magnify"></span>
+	        </button>
+	      </div>
+	    </div>
+	    <div id="associative_box" class="row col-12 col-sm-6 mt-2">
+	      <ul id="associative_list"></ul>
+	    </div>
+	  </form>
+	</div>
+  <!-- 搜索框 -->
 
-      <div id="associative_box" class="row col-12 col-sm-6 mt-2">
-        <ul id="associative_list"></ul>
-      </div>
-    </form>
-  </div>
+
 
 
 
@@ -565,7 +570,6 @@
 
     <div class="item_list" class="">
       <div class="row">
-        商品从这开始写
         <!-- 商品模板 -->
         <c:forEach items="${list}" var="list">
         <div class="item col-6 col-lg-3" item-id="${list.id}">

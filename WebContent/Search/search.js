@@ -13,6 +13,7 @@ $(document).ready(function () {
     }
   }
   // TODO: 发送Ajax请求渲染搜索列表
+  
   // 商品列表渲染出后再执行该方法，该方法为计算显示商品的降价幅度
   renderPercent();
   // 如果没有查找到任何商品就执行这个方法：

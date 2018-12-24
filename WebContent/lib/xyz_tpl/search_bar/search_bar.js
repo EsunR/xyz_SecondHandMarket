@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 获取icon资源
-  $('#publish img').eq(0).attr('src', '../Data/SecondHand/System/publish.png')
+  $('#publish img').eq(0).attr('src', loca + '/Data/SecondHand/System/publish.png')
   // 搜索联想
   var getSearchData = function (search_str) {
     $.ajax({
@@ -52,6 +52,11 @@ $(document).ready(function () {
   $('#associative_list').on('click', '.associative_item', function () {
     $('#search_input').val($(this).text());
     $('#associative_box').hide();
+  })
+  
+  $("#search .btn-outline-light").click(function () {  
+	  let search = $("#search_input").val();
+	  window.location.href = loca+'/Searchs/'+ search;
   })
 });
 

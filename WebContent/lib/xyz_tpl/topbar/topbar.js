@@ -47,7 +47,7 @@ $(document).ready(function () {
   $('#user_name .badge-primary').text(user_msg_num + sys_msg_num)
 
   // TODO:　跳转按钮的链接
-  let user_url = loca+'/User/user.jsp'
+  let user_url = loca+'/Users/'+itemid
   
   let nav_btn_url = ['#publish', '#want', '#collection'];
   for (let i = 0; i < 3; i++) {

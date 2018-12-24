@@ -4,7 +4,6 @@
  <select id="findItemById"  parameterType="java.lang.Integer" resultType="pojo.UserAndItem">
     select 
      i.id,i.title,i.price,i.oldprice,i.conditions,i.sellerid,i.description,i.sellername,i.sellercontactway,i.sellercontact,
-    
     u.name,u.realname,u.school,u.level,u.phone,u.qq,u.wechat,u.password
     from item i,user u
     where i.id = #{id} and u.id=i.sellerId
@@ -12,9 +11,22 @@
  <select id="findAllItem"   resultType="pojo.UserAndItem">
     select 
      i.id,i.title,i.price,i.oldprice,i.conditions,i.sellerid,i.description,i.sellername,i.sellercontactway,i.sellercontact,
-    
     u.name,u.realname,u.school,u.level,u.phone,u.qq,u.wechat,u.password
     from item i,user u
     where  u.id=i.sellerId
+  </select>
+ <select id="findUserWantByUserId" parameterType="java.lang.Integer"   resultType="pojo.UserAndItem">
+    select 
+     i.id,i.title,i.price,i.oldprice,i.conditions,i.sellerid,i.description,i.sellername,i.sellercontactway,i.sellercontact,
+    u.name,u.realname,u.school,u.level,u.phone,u.qq,u.wechat,u.password
+    from item i,user u,want w
+    where  u.id=i.sellerId and w.user_id=#{userid} and w.item_id=i.id
+  </select>
+ <select id="findItemBySellerTitle" parameterType="java.lang.String"   resultType="pojo.UserAndItem">
+    select 
+     i.id,i.title,i.price,i.oldprice,i.conditions,i.sellerid,i.description,i.sellername,i.sellercontactway,i.sellercontact,
+    u.name,u.realname,u.school,u.level,u.phone,u.qq,u.wechat,u.password
+    from item i,user u
+    where  u.id=i.sellerId and i.title like CONCAT('%', #{title}, '%')
   </select>
 </mapper>

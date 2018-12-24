@@ -10,4 +10,8 @@ public interface Item1Mapper {
 
 	List<UserAndItem> findAllItem();
 
+	List<UserAndItem> findUserWantByUserId();
+
+	List<UserAndItem> findItemBySellerTitle(String title);
+
 }

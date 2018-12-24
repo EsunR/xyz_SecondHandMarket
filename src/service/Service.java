@@ -24,4 +24,10 @@ public interface Service {
 
 	void addWant(Want want);
 
+	List<Item> findItemBySellerId(Integer userid);
+
+	List<UserAndItem> findUserWantByUserId(Integer userid);
+
+	List<UserAndItem> findItemBySellerTitle(String title);
+
 }

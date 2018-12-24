@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -6,24 +9,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- jquery -->
-  <script src="../lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="${pageContext.request.contextPath}/lib/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
   <!-- bootstrap -->
-  <script src="../lib/bootstrap/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+  <script src="${pageContext.request.contextPath}/lib/bootstrap/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/bootstrap/bootstrap.min.css">
 
   <!-- md icon -->
-  <link rel="stylesheet" href="../lib/md-fonts/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/md-fonts/css/materialdesignicons.min.css">
   <!-- xyz -->
-  <link rel="stylesheet" href="../lib/xyz_tpl/topbar/topbar.css">
-  <script src="../lib/xyz_tpl/topbar/topbar.js"></script>
-  <link rel="stylesheet" href="../lib/xyz_tpl/top_btn/top_btn.css">
-  <script src="../lib/xyz_tpl/top_btn/top_btn.js"></script>
-  <link rel="stylesheet" href="../lib/xyz_tpl/footer/footer.css">
-  <link rel="stylesheet" href="../lib/xyz_tpl/search_bar/search_bar.css">
-  <script src="../lib/xyz_tpl/search_bar/search_bar.js"></script>
+  <script type="text/javascript">
+    var loca = "${pageContext.request.contextPath}";
+    var itemid="${user.id}";
+  </script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
+  <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.css">
+  <script src="${pageContext.request.contextPath}/lib/xyz_tpl/top_btn/top_btn.js"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/footer/footer.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/search_bar/search_bar.css">
+  <script src="${pageContext.request.contextPath}/lib/xyz_tpl/search_bar/search_bar.js"></script>
   <!-- self -->
-  <link rel="stylesheet" href="./search.css">
-  <script src="./search.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/Search/search.css">
+  <script src="${pageContext.request.contextPath}/Search/search.js" type="text/javascript"></script>
   <title>搜索</title>
 </head>
 
@@ -52,7 +59,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="../Index/index.html">二手市场</a>
+            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.html">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -147,6 +154,7 @@
         </div>
 
         <!-- 商品模板 -->
+        <c:forEach items="${searchItem }" var="searchItem">
         <div class="item col-6 col-lg-3">
           <div class="item_innerbox">
             <div class="img_border">
@@ -155,21 +163,22 @@
             <div class="price_box clearfix">
               <div class="percent"></div>
               <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥18</div>
+                <div class="now">￥${searchItem.price}</div>
+                <div class="old">￥${searchItem.oldprice}</div>
               </div>
             </div>
             <div class="item_title">
-              <a>帽子，加绒，原价99，现在只需10元aaaaaa！</a>
+              <a>${searchItem.title}</a>
             </div>
             <div class="seller clearfix">
               <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
+                <span class="mdi mdi-account-box"></span>${searchItem.name}
               </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
+              <div class="seller_level">信誉等级：<span>${searchItem.level}</span></div>
             </div>
           </div>
         </div>
+        </c:forEach>
         <!-- --------- -->
 
       </div>

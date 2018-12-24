@@ -33,6 +33,7 @@
   <!-- self -->
   <script type="text/javascript">
   var loca="${pageContext.request.contextPath}";
+  var itemid="${user.id}";
   </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/Publish/publish.css">
   <script src="${pageContext.request.contextPath}/Publish/publish.js"></script>

@@ -52,7 +52,6 @@ public class ServiceImpl implements Service {
 	}
 	@Override
 	public List<UserAndItem> findAllItem() {
-		ItemExample example=new ItemExample();
 		List<UserAndItem> list = item1Mapper.findAllItem();
 		return list;
 	}
@@ -71,6 +70,24 @@ public class ServiceImpl implements Service {
 	public void addWant(Want want) {
 		wantMapper.addWant(want);
 		
+	}
+	@Override
+	public List<Item> findItemBySellerId(Integer userid) {
+		ItemExample example=new ItemExample();
+		 pojo.ItemExample.Criteria criteria = example.createCriteria();
+		criteria.andSelleridEqualTo(userid);
+		List<Item> list = itemMapper.selectByExample(example);
+		return list;
+	}
+	@Override
+	public List<UserAndItem> findUserWantByUserId(Integer userid) {
+		List<UserAndItem> list = item1Mapper.findUserWantByUserId();
+		return list;
+	}
+	@Override
+	public List<UserAndItem> findItemBySellerTitle(String title) {
+		List<UserAndItem> list = item1Mapper.findItemBySellerTitle(title);
+		return list;
 	}
 
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -18,6 +19,7 @@
   <!-- xyz -->
      <script type="text/javascript">
     var loca = "${pageContext.request.contextPath}";
+    var itemid="${user.id}";
   </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
@@ -302,23 +304,25 @@
         <div class="row">
 
           <!-- 模板 -->
-          <div class="item_card col-lg-6" item_id="1001">
+          <c:forEach items="${userpublish}" var="userpublish">
+          
+          <div class="item_card col-lg-6" item_id="${userpublish.id}">
             <div class="row">
               <div class="img_box col-4">
                 <img class="item_img" src="" test="1111">
               </div>
               <div class="item_info col-8">
                 <div class="title">
-                  棒球帽，加绒，原价99，现在只需10元！包邮！包邮！包邮！
+                  ${userpublish.title}
                 </div>
                 <div class="price_box clearfix">
                   <div id="oldPrice" class="price_inner">
                     <span class="title">原价:</span>
-                    ￥<span class="num">998</span>
+                    ￥<span class="num">${userpublish.oldprice}</span>
                   </div>
                   <div id="price" class="price_inner">
                     <span class="title">现价:</span>
-                    ￥<span class="num">9.8</span>
+                    ￥<span class="num">${userpublish.price}</span>
                   </div>
                 </div>
               </div>
@@ -332,6 +336,7 @@
               </div>
             </div>
           </div>
+          </c:forEach>
           <!-- 模板 -->
 
         </div>
@@ -341,25 +346,25 @@
       <!-- 我想要的 -->
       <div class="tab-pane fade" id="want" role="tabpanel" aria-labelledby="want_tab">
         <div class="row">
-
+			<c:forEach var="userwant" items="${userwant}">
           <!-- 模板 -->
-          <div class="item_card col-lg-6" item_id="1002">
+          <div class="item_card col-lg-6" item_id="${userwant.id}">
             <div class="row">
               <div class="img_box col-4">
                 <img class="item_img" src="" test="1111">
               </div>
               <div class="item_info col-8">
                 <div class="title">
-                  棒球帽，加绒，原价99，现在只需10元！包邮！包邮！包邮！
+                  ${userwant.title}
                 </div>
                 <div class="price_box clearfix">
                   <div id="oldPrice" class="price_inner">
                     <span class="title">原价:</span>
-                    ￥<span class="num">998</span>
+                    ￥<span class="num">${userwant.oldprice}</span>
                   </div>
                   <div id="price" class="price_inner">
                     <span class="title">现价:</span>
-                    ￥<span class="num">9.8</span>
+                    ￥<span class="num">${userwant.price}</span>
                   </div>
                 </div>
               </div>
@@ -374,6 +379,7 @@
             </div>
           </div>
           <!-- 模板 -->
+			</c:forEach>
 
         </div>
       </div>
