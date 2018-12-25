@@ -123,7 +123,7 @@ public class Controller1 {
   
 	@ResponseBody
 	@RequestMapping("register")
-	public Map<String,Object> register( User user,Model model){
+	public Map<String,Object> register( User user){
 		Map<String, Object> map=new HashMap<String, Object>();
 		try {
 			User user1=service.findUserByUserName(user);
