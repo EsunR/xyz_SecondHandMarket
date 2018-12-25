@@ -26,7 +26,7 @@ public class LoginFilter implements Filter{
 		String targetURL = currentURL.substring(ctxPath.length());
 		HttpSession session = request.getSession(false);
 		//对当前页面进行判断，如果当前页面不为登录页面
-		if(!("/Login/login.jsp".equals(targetURL))){
+		if(!("/Login/login.jsp".equals(targetURL))&&!("/Publish/publish.jsp".equals(targetURL))){
 			System.out.println("1"+targetURL+"ctxPath:"+ctxPath+"currentURL:"+currentURL);
 			//在不为登陆页面时，再进行判断，如果不是登陆页面也没有session则跳转到登录页面，
 			if(session == null || session.getAttribute("user") == null){
