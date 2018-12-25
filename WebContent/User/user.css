@@ -181,7 +181,7 @@ body ul {
 
 #main_box .item_card .item_info {
   padding: 1rem;
-  padding-left: 0;
+  padding-left: 10px;
   position: relative;
 }
 

@@ -622,7 +622,7 @@
             <h1>校园猪 | SchoolPig</h1>
             <h2>感谢你的加入</h2>
             <hr>
-            <h3>Time: 2017.12.12 Version: 1.0 α</h3>
+            <h3>Time: 2017.12.25 Version: 2.0 α</h3>
           </div>
         </div>
       </div>
