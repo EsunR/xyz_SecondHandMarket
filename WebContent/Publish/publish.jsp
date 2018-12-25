@@ -127,7 +127,7 @@
   <form id="item_info"  action="${pageContext.request.contextPath}/publishs" method="post"  class="container" enctype="multipart/form-data">
     <!-- STEP PART1 -->
     <input type="hidden" name="sellerid" value="${user.id}">
-    <div class="step row">
+    <div class="step row" style="margin-top: 0;margin-bottom: 2rem">
       <div>- Step1. 添加商品的基本信息 -</div>
     </div>
     <!-- 商品标题 -->

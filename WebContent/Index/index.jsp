@@ -256,7 +256,7 @@
             <li class="banner_list_item item">
               <img src="${pageContext.request.contextPath}/Index/img/banner_list/5.jpg">
               <div class="list_detail">
-                <div class="list_detail_title">砍舍友专用</div>
+                <div class="list_detail_title">不锈钢菜刀</div>
                 <div class="price_box">
                   <span class="price">￥10</span>
                   <span class="original_price">￥998</span>
