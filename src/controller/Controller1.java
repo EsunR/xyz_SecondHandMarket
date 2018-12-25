@@ -78,6 +78,34 @@ public class Controller1 {
 		}
 		
 	} 
+	@ResponseBody
+	@RequestMapping("ipublishDelete")
+	public Map<String,Object> ipublishDelete( Integer id){
+		Map<String, Object> map=new HashMap<String, Object>();
+		try {
+			 service.ipublishDelete(id);
+				map.put("msg","1");
+				return map;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	} 
+	@ResponseBody
+	@RequestMapping("iwantDelete")
+	public Map<String,Object> iwantDelete( Want want){
+		Map<String, Object> map=new HashMap<String, Object>();
+		try {
+			service.iwantDelete(want);
+			map.put("msg","1");
+			return map;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	} 
 	
   
 	@ResponseBody

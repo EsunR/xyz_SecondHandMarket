@@ -135,13 +135,50 @@ $(function () {
     event.stopPropagation();
     item_id = $(this).parents('.item_card').attr('item_id');
     $('#ensure_publish_delete').modal('toggle');
+    $.ajax({
+  	    type: "post",
+  	    dataType:"json",
+  	    data:{id:item_id},
+  	    url: loca+"/ipublishDelete",
+  	    async:false,
+  	  success:function(data) {
+    	    if(data.msg==1){
+    	    	window.location.reload();
+    	    }
+    	    else{
+    	    	alert(信息异常);
+    	    }
+    	    },
+    	    error:function(data){
+    	    	alert("系统出错");
+    	    }
+  	  });
   })
 
   // 点击“想要-删除”按钮
   $('.want_delete').click(function () {
     event.stopPropagation();
     item_id = $(this).parents('.item_card').attr('item_id');
-    $('#ensure_want_delete').modal('show')
+    user_id = $(this).parents('.item_card').attr('user_id');
+    $('#ensure_want_delete').modal('show');
+    $.ajax({
+  	    type: "post",
+  	    dataType:"json",
+  	    data:{user_id:user_id,item_id:item_id},
+  	    url: loca+"/iwantDelete",
+  	    async:false,
+  	  success:function(data) {
+    	    if(data.msg==1){
+    	    	window.location.reload();
+    	    }
+    	    else{
+    	    	alert(信息异常);
+    	    }
+    	    },
+    	    error:function(data){
+    	    	alert("系统出错");
+    	    }
+  	  });
   })
 
   // 点击“查看卖家信息”按钮

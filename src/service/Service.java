@@ -30,4 +30,8 @@ public interface Service {
 
 	List<UserAndItem> findItemBySellerTitle(String title);
 
+	void ipublishDelete(Integer id);
+
+	void iwantDelete(Want want);
+
 }

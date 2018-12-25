@@ -89,5 +89,15 @@ public class ServiceImpl implements Service {
 		List<UserAndItem> list = item1Mapper.findItemBySellerTitle(title);
 		return list;
 	}
+	@Transactional
+	public void ipublishDelete(Integer id) {
+		  itemMapper.deleteByPrimaryKey(id);
+		
+	}
+	@Override
+	public void iwantDelete(Want want) {
+		wantMapper.iwantDelete(want);
+		
+	}
 
 }

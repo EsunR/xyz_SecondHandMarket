@@ -5,4 +5,7 @@
 <insert id="addWant" parameterType="pojo.Want">
 insert into want (user_id,item_id) values(#{user_id},#{item_id})
 </insert>
+<insert id="iwantDelete" parameterType="pojo.Want">
+Delete from want where user_id=#{user_id} and item_id=#{item_id}
+</insert>
 </mapper>
