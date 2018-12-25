@@ -79,6 +79,19 @@ public class Controller1 {
 		
 	} 
 	@ResponseBody
+	@RequestMapping("loginOut")
+	public Map<String,Object> loginOut(HttpSession session ){
+		Map<String, Object> map=new HashMap<String, Object>();
+		try {
+			session.invalidate();
+				map.put("msg","1");
+				return map;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	} 
+	@ResponseBody
 	@RequestMapping("ipublishDelete")
 	public Map<String,Object> ipublishDelete( Integer id){
 		Map<String, Object> map=new HashMap<String, Object>();

@@ -65,7 +65,24 @@ $(document).ready(function () {
     window.location.href = user_url + '#sysMsg'
   })
   $('.user_list_btn').eq(2).click(function () {
-    window.location.href = loca+'/Login/login.jsp'
+	  $.ajax({
+  	    type: "post",
+  	    dataType:"json",
+  	    url: loca+"/loginOut",
+  	    async:false,
+  	    success:function(data) {
+  	    if(data.msg==1){
+  	    	window.location.href = loca+'/Login/login.jsp';
+  	    }
+  	    else{
+  	    	altert('系统出错')
+  	    }
+  	    },
+  	    error:function(data){
+  	    	altert("系统出错");
+  	    }
+  	  });
+    
   })
 
 
