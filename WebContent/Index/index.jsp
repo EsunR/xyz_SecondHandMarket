@@ -17,7 +17,7 @@
   <!-- xyz组件 -->
   <script type="text/javascript">
     var loca = "${pageContext.request.contextPath}";
-    var itemid="${user.id}";
+    var itemid = "${user.id}";
   </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
@@ -106,28 +106,28 @@
   <!-- TopBar -->
 
   <!-- 搜索框 -->
-	<div id="search_box">
-	  <div id="index_subtitle">二手物品发布 & 交易市场</div>
-	  <button id="publish" class="btn btn-outline-light" type="button">
-	    <img src="" alt="">
-	    <a href="${pageContext.request.contextPath}/Publish/publish.jsp">发布物品</a>
-	  </button>
-	  <form id="search" class="container" action="">
-	    <div class="input-group">
-	      <input id="search_input" type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want"
-	        aria-describedby="basic-addon2">
-	      <div class="input-group-append">
-	        <button class="btn btn-outline-light" type="button">
-	          搜索
-	          <span class="mdi mdi-magnify"></span>
-	        </button>
-	      </div>
-	    </div>
-	    <div id="associative_box" class="row col-12 col-sm-6 mt-2">
-	      <ul id="associative_list"></ul>
-	    </div>
-	  </form>
-	</div>
+  <div id="search_box">
+    <div id="index_subtitle">二手物品发布 & 交易市场</div>
+    <button id="publish" class="btn btn-outline-light" type="button">
+      <img src="" alt="">
+      <a href="${pageContext.request.contextPath}/Publish/publish.jsp">发布物品</a>
+    </button>
+    <form id="search" class="container" action="">
+      <div class="input-group">
+        <input id="search_input" type="text" class="form-control" placeholder="搜索你想要的东西" aria-label="Search what you want"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-light" type="button">
+            搜索
+            <span class="mdi mdi-magnify"></span>
+          </button>
+        </div>
+      </div>
+      <div id="associative_box" class="row col-12 col-sm-6 mt-2">
+        <ul id="associative_list"></ul>
+      </div>
+    </form>
+  </div>
   <!-- 搜索框 -->
 
 
@@ -572,228 +572,31 @@
       <div class="row">
         <!-- 商品模板 -->
         <c:forEach items="${list}" var="list">
-        <div class="item col-6 col-lg-3" item-id="${list.id}">
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/cover" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥${list.price}</div>
-                <div class="old">￥${list.oldprice}</div>
+          <div class="item col-6 col-lg-3" item-id="${list.id}">
+            <div class="item_innerbox">
+              <div class="img_border">
+                <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${list.id}/cover" alt="">
               </div>
-            </div>
-            <div class="item_title">
-              <a>${list.title}</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>${list.name}
+              <div class="price_box clearfix">
+                <div class="percent">-99%</div>
+                <div class="price clearfix">
+                  <div class="now">￥${list.price}</div>
+                  <div class="old">￥${list.oldprice}</div>
+                </div>
               </div>
-              <div class="seller_level">信誉等级：<span>${list.level}</span></div>
+              <div class="item_title">
+                <a>${list.title}</a>
+              </div>
+              <div class="seller clearfix">
+                <div class="seller_name">
+                  <span class="mdi mdi-account-box"></span>${list.name}
+                </div>
+                <div class="seller_level">信誉等级：<span>${list.level}</span></div>
+              </div>
             </div>
           </div>
-        </div>
         </c:forEach>
         <!-- --------- -->
-
-       <%--  <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div>
-        <!-- --------- -->
-
-        <!-- 商品模板 -->
-        <div class="item col-6 col-lg-3">
-
-          <div class="item_innerbox">
-            <div class="img_border">
-              <img src="${pageContext.request.contextPath}/Index/img/banner_list/3.jpg" alt="">
-            </div>
-            <div class="price_box clearfix">
-              <div class="percent">-99%</div>
-              <div class="price clearfix">
-                <div class="now">￥9.8</div>
-                <div class="old">￥998</div>
-              </div>
-            </div>
-            <div class="item_title">
-              <a>洗面奶，加绒，原价99，现在只需10元aaaaaa！</a>
-            </div>
-            <div class="seller clearfix">
-              <div class="seller_name">
-                <span class="mdi mdi-account-box"></span>张*犬
-              </div>
-              <div class="seller_level">信誉等级：<span>极好</span></div>
-            </div>
-          </div>
-
-        </div> --%>
-        <!-- --------- -->
-
 
 
       </div>
