@@ -112,7 +112,7 @@
     <div id="index_subtitle">二手物品发布 & 交易市场</div>
     <button id="publish" class="btn btn-outline-light" type="button">
       <img src="" alt="">
-      <a href="../Publish/publish.html">发布物品</a>
+      <a href="${pageContext.request.contextPath}/Publish/publish.jsp">发布物品</a>
     </button>
     <form id="search" class="container" action="">
       <div class="input-group">
@@ -154,11 +154,11 @@
         </div>
 
         <!-- 商品模板 -->
-        <c:forEach items="${searchItem }" var="searchItem">
+        <c:forEach items="${searchItem}" var="searchItem">
         <div class="item col-6 col-lg-3">
           <div class="item_innerbox">
             <div class="img_border">
-              <img src="../Data/SecondHand/Item/1001/cover" alt="">
+              <img src="${pageContext.request.contextPath}/Data/SecondHand/Item/${searchItem.id}/cover" alt="">
             </div>
             <div class="price_box clearfix">
               <div class="percent"></div>
