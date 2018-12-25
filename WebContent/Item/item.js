@@ -22,6 +22,22 @@ $(document).ready(function () {
     }
   })
 
+  // 渲染卖家联系方式
+	function renderSellerInfo() {
+	  let $contactWay = $('#seller_contact span').eq(1);
+	  switch ($contactWay.text()) {
+	    case '1':
+	      $contactWay.text('QQ');
+	      break;
+	    case '2':
+	      $contactWay.text('微信');
+	      break;
+	    case '3':
+	      $contactWay.text('手机');
+	      break;
+	  }
+	};
+  renderSellerInfo();
 
 
   // 留言板消息渲染

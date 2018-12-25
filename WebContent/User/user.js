@@ -106,7 +106,8 @@ $(function() {
 		user_id = $(this).parents('.item_card').attr('user_id');
 		$('#ensure_want_delete').modal('show');
 	})
-
+	
+	
 	// 点击“查看卖家信息”按钮
 	$('.seller_info').click(
 			function() {

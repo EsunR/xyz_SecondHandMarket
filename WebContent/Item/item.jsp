@@ -210,7 +210,7 @@
         </div>
         <div class="modal-body">
           <div id="seller_name">
-            卖家称呼：<span>${list.name}</span>
+            卖家称呼：<span>${list.sellername}</span>
           </div>
           <div id="seller_contact">
             联系方式：

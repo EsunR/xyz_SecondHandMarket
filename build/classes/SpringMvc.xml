@@ -18,6 +18,14 @@
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/Data/**"/>
+            <mvc:exclude-mapping path="/Index/**"/>
+            <mvc:exclude-mapping path="/Item/**"/>
+            <mvc:exclude-mapping path="/lib/**"/>
+            <mvc:exclude-mapping path="/Login/**"/>
+            <mvc:exclude-mapping path="/Publish/**"/>
+            <mvc:exclude-mapping path="/Search/**"/>
+            <mvc:exclude-mapping path="/User/**"/>
             <bean class="controller.MyInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
