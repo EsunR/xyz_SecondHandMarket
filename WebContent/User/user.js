@@ -1,17 +1,8 @@
 $(function () {
   // 显示面板
   showPanel();
-  function showPanel() {
-    let part = window.location.hash;
-    $('.nav-link').each(function () {
-      $(this).removeClass('active').attr('aria-selected', 'false');
-    });
-    $(part + '_tab').addClass('active').attr('aria-selected', 'true');
-    $('.tab-pane').removeClass('show active');
-    $(part).addClass('show active')
-  }
   var url = window.location.href.split('#')[0];
-  
+
   /*
   //切换面板变换url
   $('#info_tab').click(function(){
@@ -33,8 +24,8 @@ $(function () {
 	  window.location.href = url + '#sysMsg';
   })
   */
-  
-  
+
+
   //url变化监听器
   if (('onhashchange' in window) && ((typeof document.documentMode === 'undefined') || document.documentMode == 8)) {
     window.onhashchange = hashChange;
@@ -82,45 +73,35 @@ $(function () {
   // 点击“提交更改”按钮
   $('#submit_change').click(function () {
     // TODO: 提交更改信息
-	  $.ajax({
-	  	    type: "post",
-	  	    dataType:"json",
-	  	    data:$('#ss1').serialize(),
-	  	    url: loca+"/userUpdate",
-	  	    async:false,
-	  	  success:function(data) {
-	    	    if(data.msg==1){
-	    	    	window.location.reload();
-	    	    }
-	    	    else{
-	    	    	alert(信息异常);
-	    	    }
-	    	    },
-	    	    error:function(data){
-	    	    	alert("系统出错");
-	    	    }
-	  	  });
+    $.ajax({
+      type: "post",
+      dataType: "json",
+      data: $('#ss1').serialize(),
+      url: loca + "/userUpdate",
+      async: false,
+      success: function (data) {
+        if (data.msg == 1) {
+          window.location.reload();
+        }
+        else {
+          alert(信息异常);
+        }
+      },
+      error: function (data) {
+        alert("系统出错");
+      }
+    });
   })
 
 
 
-  // 商品信息面板相关=========================
-
-  function getSrc(item_id) {
-    return loca +'/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
-  }
-  renderItemPic();  // 该函数应该放在渲染出商品列表（页面DOM树生成）之后执行
-  function renderItemPic() {
-    $('.item_card').each(function () {
-      item_id = $(this).attr('item_id')
-      $(this).find('img').eq(0).attr('src', getSrc(item_id));
-    })
-  }
+  // 商品信息面板相关=========================  
+  renderItemPic();  // 该函数应该放在渲染出商品列表中的图片（页面DOM树生成）之后执行
   // 点击商品获取商品ID后跳转到商品页面
   $('.item_card').click(function () {
     item_id = $(this).attr('item_id');
     // TODO: 由商品ID跳转到商品页面
-    window.location.href = loca+'/Items/' + item_id;
+    window.location.href = loca + '/Items/' + item_id;
   })
 
   // 点击“发布-已售出”按钮
@@ -189,17 +170,12 @@ $(function () {
     // TODO: 发送Ajax请求渲染出模态框中的卖家信息，下方示例
     // Ajax返回的对象
     let seller_info = {
-      sellerName: '张先生',
-      sellerContactWay: 2,
-      sellerContact: '641411169'
+      sellerName: $(this).parents('.item_card').attr('item_sellerName'),
+      sellerContactWay: $(this).parents('.item_card').attr('item_contactWay'),
+      sellerContact: $(this).parents('.item_card').attr('item_contact')
     }
     // Ajax接收数据成功后执行的函数
     renderSellerInfo(seller_info);
   })
-
-  // 执行Ajax
-  function render(){
-
-  }
 
 });

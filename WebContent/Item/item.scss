@@ -16,6 +16,22 @@ body {
 // 商品信息
 #item_info {
   margin-top: 1rem;
+  .area_title {
+    .col-12 {
+      background-color: $main;
+      height: 80px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: $shadow;
+      .title{
+        font-size: 2rem;
+        line-height: 80px;
+        text-align: center;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
   .item_cover {
     position: relative;
     padding: 0;
@@ -72,7 +88,7 @@ body {
       }
       margin-bottom: 0px;
       font-size: 1rem;
-      color: rgba(0, 0, 0, 0.5);
+      font-weight: 100;
     }
     .item_name {
       text-align: justify;
@@ -82,10 +98,10 @@ body {
     .item_text {
       font-size: 1.3rem;
       color: rgba(0, 0, 0, 0.8);
+      font-weight: bold;
     }
     .old_price {
-      text-decoration: line-through;
-      color: rgba(0, 0, 0, 0.5);
+      color: rgba(0, 0, 0, 0.3);
     }
     .percent {
       font-size: 1.5rem;
@@ -102,6 +118,7 @@ body {
       span {
         font-size: 1.3rem;
         margin-right: 5px;
+        font-weight: bold;
       }
       .badge {
         font-size: 1rem;
@@ -134,18 +151,18 @@ body {
     color: rgba(0, 0, 0, 0.4);
     margin-bottom: 1rem;
   }
-  #your_info_alert{
+  #your_info_alert {
     display: none;
   }
 }
-#seller_info{
-  #seller_contact{
+#seller_info {
+  #seller_contact {
     margin-top: 1rem;
   }
 }
 
 // 弹窗消息
-.alert{
+.alert {
   position: fixed;
   z-index: 1000;
   width: 50%;
@@ -181,9 +198,8 @@ body {
     height: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color: white;
     .col-12 {
-      background-image: $featured;
+      background: $main;
     }
     span {
       margin-left: 10px;
@@ -227,10 +243,9 @@ body {
 
       .title {
         cursor: default;
-        background-image: $featured;
+        background: $main;
         line-height: 4rem;
         text-align: center;
-        color: #fff;
         font-size: 1.5rem;
       }
 

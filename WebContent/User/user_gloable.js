@@ -1,3 +1,14 @@
+// 显示面板
+function showPanel() {
+    let part = window.location.hash;
+    $('.nav-link').each(function () {
+      $(this).removeClass('active').attr('aria-selected', 'false');
+    });
+    $(part + '_tab').addClass('active').attr('aria-selected', 'true');
+    $('.tab-pane').removeClass('show active');
+    $(part).addClass('show active')
+  }
+
 // 显示用户修改的头像
 function showPreview(source) {
   var file = source.files[0];
@@ -9,6 +20,18 @@ function showPreview(source) {
     fr.readAsDataURL(file);
   }
   console.log(1);
+}
+
+
+// 获取商品图片相关
+function getSrc(item_id) {
+    return loca + '/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
+}
+function renderItemPic() {
+    $('.item_card').each(function () {
+      item_id = $(this).attr('item_id')
+      $(this).find('img').eq(0).attr('src', getSrc(item_id));
+    })
 }
 
 
@@ -44,16 +67,16 @@ function want_delete() {
 function renderSellerInfo(seller_info) {
   $('#seller_name span').eq(0).text(seller_info.sellerName);
   $('#seller_contact span').eq(0).text(seller_info.sellerContact);
-  let $contactWay = $('#seller_contact span').eq(1)
+  let $contactWay = $('#seller_contact span').eq(1);
   switch (seller_info.sellerContactWay) {
-    case 1:
+    case '1':
       $contactWay.text('QQ');
       break;
-    case 2:
+    case '2':
       $contactWay.text('微信');
       break;
-    case 3:
-      $contactWay.text('电话');
+    case '3':
+      $contactWay.text('手机');
       break;
   }
 }

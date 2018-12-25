@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -17,9 +17,9 @@
   <!-- md icon -->
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/md-fonts/css/materialdesignicons.min.css">
   <!-- xyz -->
-     <script type="text/javascript">
+  <script type="text/javascript">
     var loca = "${pageContext.request.contextPath}";
-    var itemid="${user.id}";
+    var itemid = "${user.id}";
   </script>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.css">
   <script src="${pageContext.request.contextPath}/lib/xyz_tpl/topbar/topbar.js"></script>
@@ -65,7 +65,7 @@
       </ul>
       <div class="title d-none d-md-block">
         校园猪&nbsp;|&nbsp;
-        <span class="school_name">SchoolName</span>
+        <span class="school_name">${user.school}</span>
       </div>
 
       <a class="nav_btn">
@@ -80,8 +80,8 @@
 
       <div id="user_list">
         <a id="user_name">
-          <span class="name">UserName</span>
-          <img id="user_head" src=""></img>
+          <span class="name">${user.name}</span>
+          <img id="user_head" src="../Data/User/Default/head"></img>
           <span class="badge badge-pill badge-primary">8</span>
         </a>
 
@@ -247,20 +247,20 @@
         <div class="row">
           <div id="user_img_name" class="col-md-6">
             <div class="inner">
-              <img id="user_head_preview" src="../Data/User/1001/head" alt="" srcset="">
+              <img id="user_head_preview" src="../Data/User/Default/head" alt="" srcset="">
               <div id="user_info_name">${user.name}</div>
             </div>
           </div>
           <div class="col-md-6" id="user_info_box">
             <form id="ss1">
               <fieldset disabled>
-              <input type="hidden" name="id" value="${user.id}">
+                <input type="hidden" name="id" value="${user.id}">
                 <div class="row">
                   <div class="form-group col-6">
                     <label for="userName">用户名</label>
-                    <input type="text" id="name" name="name"  class="form-control" value="${user.name}">
+                    <input type="text" id="name" name="name" class="form-control" value="${user.name}">
                   </div>
-					
+
                   <div class="form-group col-6">
                     <label for="realName">真实姓名</label>
                     <input type="text" id="realname" name="realname" class="form-control" value="${user.realname}">
@@ -269,32 +269,32 @@
 
                 <div class="form-group">
                   <label for="school">所在学校</label>
-                  <input type="text" id="school" name="school"  class="form-control" value="${user.school}">
+                  <input type="text" id="school" name="school" class="form-control" value="${user.school}">
                 </div>
 
                 <div class="form-group">
                   <label for="phone">联系电话</label>
-                  <input type="text" id="phone" name="phone"  class="form-control" value="${user.phone}">
+                  <input type="text" id="phone" name="phone" class="form-control" value="${user.phone}">
                 </div>
 
                 <div class="form-group">
                   <label for="qq">QQ</label>
-                  <input type="text" id="qq" name="qq"  class="form-control" value="${user.qq}">
+                  <input type="text" id="qq" name="qq" class="form-control" value="${user.qq}">
                 </div>
 
                 <div class="form-group">
                   <label for="wechat">微信</label>
-                  <input type="text" id="wechat" name="wechat"   class="form-control" value="${user.wechat}">
+                  <input type="text" id="wechat" name="wechat" class="form-control" value="${user.wechat}">
                 </div>
                 <div class="file_btn">
-                  <input type="file" id="file" name="file"  onchange="showPreview(this)" />
+                  <input type="file" id="file" name="file" onchange="showPreview(this)" />
                   <button class="btn btn-success">修改头像</button>
                 </div>
               </fieldset>
-            <div class="btn_box">
-              <button id="change" class="btn btn-danger" type="button">更改信息</button>
-              <button id="submit_change" class="btn btn-" type="button" disabled>提交更改</button>
-            </div>
+              <div class="btn_box">
+                <button id="change" class="btn btn-danger" type="button">更改信息</button>
+                <button id="submit_change" class="btn btn-" type="button" disabled>提交更改</button>
+              </div>
             </form>
           </div>
         </div>
@@ -305,38 +305,38 @@
 
           <!-- 模板 -->
           <c:forEach items="${userpublish}" var="userpublish">
-          
-          <div class="item_card col-lg-6" item_id="${userpublish.id}">
-            <div class="row">
-              <div class="img_box col-4">
-                <img class="item_img" src="" test="1111">
-              </div>
-              <div class="item_info col-8">
-                <div class="title">
-                  ${userpublish.title}
+
+            <div class="item_card col-lg-6" item_id="${userpublish.id}">
+              <div class="row">
+                <div class="img_box col-4">
+                  <img class="item_img" src="" test="1111">
                 </div>
-                <div class="price_box clearfix">
-                  <div id="oldPrice" class="price_inner">
-                    <span class="title">原价:</span>
-                    ￥<span class="num">${userpublish.oldprice}</span>
+                <div class="item_info col-8">
+                  <div class="title">
+                    ${userpublish.title}
                   </div>
-                  <div id="price" class="price_inner">
-                    <span class="title">现价:</span>
-                    ￥<span class="num">${userpublish.price}</span>
+                  <div class="price_box clearfix">
+                    <div id="oldPrice" class="price_inner">
+                      <span class="title">原价:</span>
+                      ￥<span class="num">${userpublish.oldprice}</span>
+                    </div>
+                    <div id="price" class="price_inner">
+                      <span class="title">现价:</span>
+                      ￥<span class="num">${userpublish.price}</span>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div class="btn_box clearfix">
+                <div class="publish_sold button badge-secondary" data-toggle="modal" data-target="#ensure_publish_sold">
+                  <span class="mdi mdi-cash-usd"></span>
+                </div>
+                <div class="publish_delete button badge-danger">
+                  <span class="mdi mdi-delete"></span>
                 </div>
               </div>
             </div>
-            <div class="btn_box clearfix">
-              <div class="publish_sold button badge-secondary" data-toggle="modal" data-target="#ensure_publish_sold">
-                <span class="mdi mdi-cash-usd"></span>
-              </div>
-              <div class="publish_delete button badge-danger">
-                <span class="mdi mdi-delete"></span>
-              </div>
-            </div>
-          </div>
-          
+
           </c:forEach>
           <!-- 模板 -->
 
@@ -347,40 +347,40 @@
       <!-- 我想要的 -->
       <div class="tab-pane fade" id="want" role="tabpanel" aria-labelledby="want_tab">
         <div class="row">
-			<c:forEach var="userwant" items="${userwant}">
-          <!-- 模板 -->
-          <div class="item_card col-lg-6" item_id="${userwant.id}" user_id="${user.id}" item_>
-            <div class="row">
-              <div class="img_box col-4">
-                <img class="item_img" src="" test="1111">
-              </div>
-              <div class="item_info col-8">
-                <div class="title">
-                  ${userwant.title}
+          <c:forEach var="userwant" items="${userwant}">
+            <!-- 模板 -->
+            <div class="item_card col-lg-6" item_id="${userwant.id}" item_sellerName="${userwant.sellername}" user_id="${user.id}" item_contact="${userwant.sellercontact}" item_contactWay="${userwant.sellercontactway}" >
+              <div class="row">
+                <div class="img_box col-4">
+                  <img class="item_img" src="" test="1111">
                 </div>
-                <div class="price_box clearfix">
-                  <div id="oldPrice" class="price_inner">
-                    <span class="title">原价:</span>
-                    ￥<span class="num">${userwant.oldprice}</span>
+                <div class="item_info col-8">
+                  <div class="title">
+                    ${userwant.title}
                   </div>
-                  <div id="price" class="price_inner">
-                    <span class="title">现价:</span>
-                    ￥<span class="num">${userwant.price}</span>
+                  <div class="price_box clearfix">
+                    <div id="oldPrice" class="price_inner">
+                      <span class="title">原价:</span>
+                      ￥<span class="num">${userwant.oldprice}</span>
+                    </div>
+                    <div id="price" class="price_inner">
+                      <span class="title">现价:</span>
+                      ￥<span class="num">${userwant.price}</span>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div class="btn_box clearfix">
+                <div class="seller_info button badge-primary" data-toggle="modal" data-target="#seller_info">
+                  <span class="mdi mdi-account"></span>
+                </div>
+                <div class="want_delete button badge-danger">
+                  <span class="mdi mdi-delete"></span>
                 </div>
               </div>
             </div>
-            <div class="btn_box clearfix">
-              <div class="seller_info button badge-primary" data-toggle="modal" data-target="#seller_info">
-                <span class="mdi mdi-account"></span>
-              </div>
-              <div class="want_delete button badge-danger">
-                <span class="mdi mdi-delete"></span>
-              </div>
-            </div>
-          </div>
-          <!-- 模板 -->
-			</c:forEach>
+            <!-- 模板 -->
+          </c:forEach>
 
         </div>
       </div>

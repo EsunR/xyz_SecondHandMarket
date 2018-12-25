@@ -57,7 +57,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">发布需求</a>
             <a class="dropdown-item" href="#">供给市场</a>
-            <a class="dropdown-item" href="${pageContext.request.contextPath}/Index/index.jsp">二手市场</a>
+            <a class="dropdown-item" href="../Index/index.jsp">二手市场</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">首 页</a>
           </div>
@@ -65,7 +65,7 @@
       </ul>
       <div class="title d-none d-md-block">
         校园猪&nbsp;|&nbsp;
-        <span class="school_name">SchoolName</span>
+        <span class="school_name">${user.school}</span>
       </div>
 
       <a class="nav_btn">
@@ -80,7 +80,7 @@
 
       <div id="user_list">
         <a id="user_name">
-          <span class="name">UserName</span>
+          <span class="name">${user.name}</span>
           <img id="user_head" src=""></img>
           <span class="badge badge-pill badge-primary">8</span>
         </a>
@@ -256,7 +256,7 @@
             <li class="banner_list_item item">
               <img src="${pageContext.request.contextPath}/Index/img/banner_list/5.jpg">
               <div class="list_detail">
-                <div class="list_detail_title">砍舍友专用</div>
+                <div class="list_detail_title">不锈钢菜刀</div>
                 <div class="price_box">
                   <span class="price">￥10</span>
                   <span class="original_price">￥998</span>
