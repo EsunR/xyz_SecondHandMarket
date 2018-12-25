@@ -161,6 +161,7 @@ public class Controller1 {
 			ModelAndView mav = new ModelAndView();
 			int id = service.addItem(item);
 			String realPath=request.getSession().getServletContext().getRealPath("/Data/SecondHand/Item/"+id+"/");
+			System.out.println("11111111111111111111111111111111111"+request.getSession().getServletContext().getRealPath("/"));
 			File file1=new File(realPath);
 	        if(!file1.isDirectory())
 	        {
