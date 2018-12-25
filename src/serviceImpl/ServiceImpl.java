@@ -94,7 +94,7 @@ public class ServiceImpl implements Service {
 		  itemMapper.deleteByPrimaryKey(id);
 		
 	}
-	@Override
+	@Transactional
 	public void iwantDelete(Want want) {
 		wantMapper.iwantDelete(want);
 		

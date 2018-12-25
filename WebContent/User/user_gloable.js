@@ -1,13 +1,13 @@
 // 显示面板
 function showPanel() {
-    let part = window.location.hash;
-    $('.nav-link').each(function () {
-      $(this).removeClass('active').attr('aria-selected', 'false');
-    });
-    $(part + '_tab').addClass('active').attr('aria-selected', 'true');
-    $('.tab-pane').removeClass('show active');
-    $(part).addClass('show active')
-  }
+  let part = window.location.hash;
+  $('.nav-link').each(function () {
+    $(this).removeClass('active').attr('aria-selected', 'false');
+  });
+  $(part + '_tab').addClass('active').attr('aria-selected', 'true');
+  $('.tab-pane').removeClass('show active');
+  $(part).addClass('show active')
+}
 
 // 显示用户修改的头像
 function showPreview(source) {
@@ -25,40 +25,92 @@ function showPreview(source) {
 
 // 获取商品图片相关
 function getSrc(item_id) {
-    return loca + '/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
+  return loca + '/Data/SecondHand/Item/' + item_id + '/cover'; //封面在服务器上存放的路径
 }
 function renderItemPic() {
-    $('.item_card').each(function () {
-      item_id = $(this).attr('item_id')
-      $(this).find('img').eq(0).attr('src', getSrc(item_id));
-    })
+  $('.item_card').each(function () {
+    item_id = $(this).attr('item_id')
+    $(this).find('img').eq(0).attr('src', getSrc(item_id));
+  })
 }
 
 
 var item_id;
+var user_id;
 // 确定商品已卖出后执行的函数
 function publish_sold() {
   console.log(item_id);
   // TODO: 发送Ajax请求，标记商品已被卖出
-
+  $.ajax({
+    type: "post",
+    dataType: "json",
+    data: { id: item_id },
+    url: loca + "/ipublishDelete",
+    async: false,
+    success: function (data) {
+      if (data.msg == 1) {
+    	  console.log('publish delete success');
+      }
+      else {
+        alert(信息异常);
+      }
+    },
+    error: function (data) {
+      alert("系统出错");
+    }
+  });
   $('#ensure_publish_sold').modal('hide');
   $('[item_id=' + item_id + ']').fadeOut();
 }
 
 // 确定下架后执行的函数
 function publish_delete() {
-  console.log(item_id);
   // TODO: 发送Ajax请求，删除商品信息
-
+  $.ajax({
+    type: "post",
+    dataType: "json",
+    data: { id: item_id },
+    url: loca + "/ipublishDelete",
+    async: false,
+    success: function (data) {
+      if (data.msg == 1) {
+    	  console.log('publish delete success');
+      }
+      else {
+        alert(信息异常);
+      }
+    },
+    error: function (data) {
+      alert("系统出错");
+    }
+  });
   $('#ensure_publish_delete').modal('hide');
   $('[item_id=' + item_id + ']').fadeOut();
 }
 
 // 确定删除我想要的商品时执行的函数
 function want_delete() {
-  console.log(item_id);
+  console.log('user_id: ', user_id);
+  console.log('item_id: ', item_id);
   // TODO: 发送Ajax请求，从我想要的列表中删除商
-  
+  $.ajax({
+    type: "post",
+    dataType: "json",
+    data: { user_id: user_id, item_id: item_id },
+    url: loca + "/iwantDelete",
+    async: false,
+    success: function (data) {
+      if (data.msg == 1) {
+        console.log('want delete success');
+      }
+      else {
+        alert(信息异常);
+      }
+    },
+    error: function (data) {
+      alert("系统出错");
+    }
+  });
   $('#ensure_want_delete').modal('hide');
   $('[item_id=' + item_id + ']').fadeOut();
 }
