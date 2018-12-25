@@ -132,6 +132,7 @@ public class Controller1 {
 				return map;
 			}else {
 				user.setLevel("良好");
+				user.setSchool("安阳工学院");
 				service.addUser(user);
 				map.put("msg","1");
 				return map;
