@@ -4,7 +4,7 @@
 > 声明：本项目仅为前端预览版，非商用版本  
 > 地球不爆炸项目不停止
 > 
-> 演示地址：http://47.106.226.190/git/xyz_SecondhandMarket/
+> 演示地址：https://www.esunr.xyz/git/xyz_SecondhandMarket/
 ---
 
 ## TODO LSIT:
